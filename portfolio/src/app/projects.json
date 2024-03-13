@@ -1,0 +1,158 @@
+[
+	{
+		"title": "Chess Sweeper",
+		"date": "Fall 2022",
+		"image": "/landing/thumbnails/chess_sweeper.jpg",
+		"description": "A puzzle game that is a cross between chess and minesweeper. I've never been good at naming things.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Minimap",
+		"date": "Spring 2022",
+		"image": "/landing/thumbnails/minimap.jpg",
+		"description": "A community-driven map of amenities that are hard to find on car-focused maps. Created at OSU with Charlie Hayden.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "jsFLAP",
+		"date": "Fall 2021",
+		"image": "/landing/thumbnails/jsflap.jpg",
+		"description": "A Javascript Formal Languages and Automata Package for creating finite state automata. This one is gonna be a hit.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Movie Ballot",
+		"date": "Spring 2021",
+		"image": "/landing/thumbnails/vote.png",
+		"description": "A multiplayer web app for voting with your friends on what to watch. Now that's what I call niche!.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "3D Boids",
+		"date": "Spring 2021",
+		"image": "/landing/thumbnails/fish.png",
+		"description": "A sort of 3D fish tank made to cap off the boids trilogy. Not a lot to it, just something that's relaxing to look at.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Wall Climbing",
+		"date": "Winter 2020",
+		"image": "/landing/thumbnails/climbing.png",
+		"description": "An engineering project to build small self-contained climbing devices powered by vacuum suction.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Micro-projects",
+		"date": "Fall 2020",
+		"image": "/landing/thumbnails/micro.png",
+		"description": "A collection of bite-sized projects from the past year or so that took no more than a couple of hours each.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Asterboids",
+		"date": "Spring 2020",
+		"image": "/landing/thumbnails/asterboids.png",
+		"description": "A high-intensity mashup of Asteroids, Galaga, and Boids featuring online leaderboards and fast-paced arcade gameplay.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	}
+]
