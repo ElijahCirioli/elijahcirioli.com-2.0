@@ -9,6 +9,18 @@
 	--black-color: rgb(15, 15, 15);
 }
 
+@font-face {
+	font-family: "Montserrat";
+	src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+	src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	src: url("/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf");
+	src: url("/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf") format("truetype");
+}
+
 body {
 	background-color: var(--light-gray-color);
 	color: var(--black-color);
