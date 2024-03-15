@@ -1,0 +1,111 @@
+.card {
+	width: 250px;
+	height: 320px;
+	position: relative;
+	display: block;
+	filter: drop-shadow(5px 6px 10px rgba(0, 0, 0, 0.3));
+}
+
+.cardSideWrap {
+	background-color: var(--gray-color);
+	border-radius: 25px;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.7s ease-out;
+	outline: 1px solid #9c9c9c;
+}
+
+.card:hover > .cardSideWrap {
+	transform: rotateY(180deg);
+}
+
+.cardSide {
+	position: absolute;
+	top: 18px;
+	left: 20px;
+	width: calc(100% - 40px);
+	height: calc(100% - 36px);
+	backface-visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.cardSideFront {
+	transform: rotateY(0deg) translateZ(1px);
+}
+
+.cardSideBack {
+	transform: rotateY(180deg) translateZ(1px);
+	z-index: 1;
+}
+
+.title {
+	font-weight: bold;
+	color: var(--black-color);
+	font-size: 1.5rem;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+}
+
+.title:hover {
+	text-decoration: underline;
+}
+
+.date {
+	color: var(--black-color);
+	margin: 5px 0 7px 0;
+	width: 100%;
+	text-align: left;
+	font-weight: normal;
+	font-weight: 1.2rem;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	position: absolute;
+	bottom: 0;
+}
+
+.description {
+	margin: 0 auto;
+	width: 96%;
+	font-size: 0.9rem;
+	flex-grow: 1;
+}
+
+.buttonsWrap {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	gap: 6px;
+	margin-top: 5px;
+}
+
+.button {
+	background-color: var(--green-color);
+	color: var(--white-color);
+	width: 100%;
+	cursor: pointer;
+	border: 0;
+	margin: 0;
+	outline: 0;
+	font-size: 1rem;
+	padding: 8px 0;
+	border-radius: 15px;
+	transition: background-color 0.5s;
+}
+
+.button:hover {
+	background-color: var(--light-green-color);
+}

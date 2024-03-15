@@ -1,0 +1,21 @@
+:root {
+	--light-green-color: #6a915d;
+	--green-color: #546e43;
+	--dark-green-color: #3d5031;
+	--light-gray-color: #eaeaea;
+	--gray-color: #cacaca;
+	--dark-gray-color: #2c2c2c;
+	--white-color: rgb(248, 248, 248);
+	--black-color: rgb(15, 15, 15);
+}
+
+body {
+	background-color: var(--light-gray-color);
+	color: var(--black-color);
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+	min-height: 100vh;
+}
