@@ -1,5 +1,4 @@
 import Project from "./lib/Project";
-import Card from "./components/Card";
 import Image from "next/image";
 import { Comfortaa } from "next/font/google";
 import styles from "./page.module.css";
@@ -7,6 +6,7 @@ import projectsJson from "./projects.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faShirt, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
+import CardsWrap from "./components/CardsWrap";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 
@@ -49,7 +49,9 @@ export default function Home() {
 					</a>
 				</nav>
 			</header>
-			<main className={styles.cardsWrap}>{projects.map((project) => Card({ project }))}</main>
+			<main id={styles.main}>
+				<CardsWrap projects={projects} />
+			</main>
 		</>
 	);
 }
