@@ -26,7 +26,12 @@ const CardsWrap: React.FC<CardsWrapProps> = ({ projects }: CardsWrapProps) => {
 	return (
 		<div id={styles.cardsWrap} onClick={handleMouseClick}>
 			{projects.map((project) => (
-				<Card project={project} isFlipped={flippedStates[project.title]} flipCard={flipCard} key={project.title} />
+				<Card
+					project={project}
+					flipped={flippedStates[project.title]}
+					setFlipped={(e: React.MouseEvent<HTMLElement>) => flipCard(e, project.title)}
+					key={project.title}
+				/>
 			))}
 		</div>
 	);

@@ -1,5 +1,6 @@
 import Project from "./lib/Project";
 import Image from "next/image";
+import Link from "next/link";
 import { Comfortaa } from "next/font/google";
 import styles from "./page.module.css";
 import projectsJson from "./projects.json";
@@ -16,37 +17,37 @@ export default function Home() {
 	return (
 		<>
 			<header className={styles.header}>
-				<Image className={styles.logo} src="/logo.png" alt="Elijah Cirioli logo" width="551" height="316" />
+				<Image className={styles.logo} src="/logo.png" alt="Elijah Cirioli logo" width="100" height="57" />
 				<h1 id={styles.title} className={fontComfortaa.className}>
 					elijah<span className={styles.greenText}>cirioli</span>
 				</h1>
 				<div className={styles.aboutWrap}>
-					<img className={styles.aboutImage} src="/landing/portrait.jpg" />
+					<Image className={styles.aboutImage} src="/landing/portrait.jpg" alt="Elijah Cirioli portrait" width="150" height="150" />
 					<p className={styles.aboutText}>
-						Hello, I'm a full-stack software engineer from Portland, Oregon. Here are a few personal projects that I have enjoyed making.
+						Hello, I'm a full-stack software engineer from Portland, Oregon. Here are a few personal projects that I enjoyed making.
 					</p>
 				</div>
 				<nav className={styles.nav}>
-					<a className={styles.navLink}>
+					<Link className={styles.navLink} href="https://github.com/ElijahCirioli" target="_blank">
 						<FontAwesomeIcon icon={faGithub} />
 						<p className={styles.navLinkTitle}>GitHub</p>
-					</a>
-					<a className={styles.navLink}>
+					</Link>
+					<Link className={styles.navLink} href="https://www.linkedin.com/in/elijah-cirioli-591a3920b/" target="_blank">
 						<FontAwesomeIcon icon={faLinkedin} />
 						<p className={styles.navLinkTitle}>LinkedIn</p>
-					</a>
-					<a className={styles.navLink}>
+					</Link>
+					<Link className={styles.navLink} href="/landing/Elijah_Cirioli_Resume.pdf" target="_blank">
 						<FontAwesomeIcon icon={faFileLines} />
 						<p className={styles.navLinkTitle}>Résumé</p>
-					</a>
-					<a className={styles.navLink}>
+					</Link>
+					<Link className={styles.navLink} href="mailto:contact@elijahcirioli.com">
 						<FontAwesomeIcon icon={faEnvelope} />
 						<p className={styles.navLinkTitle}>Email</p>
-					</a>
-					<a className={styles.navLink}>
+					</Link>
+					<Link className={styles.navLink} href="https://www.etsy.com/shop/elijahciriolidotcom" target="_blank">
 						<FontAwesomeIcon icon={faShirt} />
 						<p className={styles.navLinkTitle}>Store</p>
-					</a>
+					</Link>
 				</nav>
 			</header>
 			<main id={styles.main}>

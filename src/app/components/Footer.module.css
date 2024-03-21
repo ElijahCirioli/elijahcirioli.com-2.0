@@ -15,11 +15,12 @@
 	font-size: 0.9rem;
 }
 
-.footer > a {
+.link {
+	color: var(--light-gray-color);
 	text-decoration: underline;
 	cursor: pointer;
 }
 
-.footer > a:hover {
+.link:hover {
 	text-decoration: none;
 }

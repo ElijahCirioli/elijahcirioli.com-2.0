@@ -1,6 +1,7 @@
 import Project from "../lib/Project";
 import { listClasses } from "../lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import { Comfortaa, Montserrat } from "next/font/google";
 import styles from "./Card.module.css";
 
@@ -11,11 +12,11 @@ const fontMontserrat = Montserrat({ subsets: ["latin"] });
 
 interface CardProps {
 	project: Project;
-	isFlipped: boolean;
-	flipCard: (e: React.MouseEvent<HTMLElement>, key: string) => void;
+	flipped: boolean;
+	setFlipped: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const Card: React.FC<CardProps> = ({ project, isFlipped, flipCard }: CardProps) => {
+const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) => {
 	const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
 		// This is all very arbitrary but I've found it to look good
 		const bounds = e.currentTarget.getBoundingClientRect();
@@ -36,18 +37,28 @@ const Card: React.FC<CardProps> = ({ project, isFlipped, flipCard }: CardProps) 
 		e.currentTarget.style.transform = "";
 	};
 
+	const handleLinkClick = (e: React.MouseEvent<HTMLElement>) => {
+		e.stopPropagation();
+	};
+
 	const cardSideWrapClasses = [styles.cardSideWrap];
-	if (isFlipped) {
+	if (flipped) {
 		cardSideWrapClasses.push(styles.flipped);
 	}
 
 	return (
 		<article className={styles.card} onMouseMove={handleMouseMove} onMouseEnter={handleMouseMove} onMouseLeave={handleMouseLeave}>
-			<div className={listClasses(...cardSideWrapClasses)} onClick={(e) => flipCard(e, project.title)}>
+			<div className={listClasses(...cardSideWrapClasses)} onClick={setFlipped}>
 				<div className={listClasses(styles.cardSide, styles.cardSideFront)}>
-					<h3 className={listClasses(styles.title, fontComfortaa.className)}>{project.title}</h3>
+					<Link
+						className={listClasses(styles.title, fontComfortaa.className)}
+						href={project.buttons[0]?.route ?? ""}
+						onClick={handleLinkClick}
+					>
+						{project.title}
+					</Link>
 					<h4 className={styles.date}>{project.date}</h4>
-					<Image className={styles.image} src={project.image} alt={project.title} width="250" height="250" />
+					<Image className={styles.image} src={project.image} alt={project.title} width="300" height="300" draggable="false" />
 				</div>
 				<div className={listClasses(styles.cardSide, styles.cardSideBack)}>
 					<h3 className={listClasses(styles.title, fontComfortaa.className)}>{project.title}</h3>
@@ -55,9 +66,14 @@ const Card: React.FC<CardProps> = ({ project, isFlipped, flipCard }: CardProps) 
 					<p className={styles.description}>{project.description}</p>
 					<div className={styles.buttonsWrap}>
 						{project.buttons.map((button) => (
-							<button className={listClasses(styles.button, fontMontserrat.className)} key={button.text}>
+							<Link
+								className={listClasses(styles.button, fontMontserrat.className)}
+								key={button.text}
+								href={button.route}
+								onClick={handleLinkClick}
+							>
 								{button.text}
-							</button>
+							</Link>
 						))}
 					</div>
 				</div>

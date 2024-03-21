@@ -5,6 +5,7 @@
 	display: block;
 	filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
 	transform-style: preserve-3d;
+	transform-origin: center;
 	transition: transform 0.15s ease-out, filter 0.15s ease-out;
 	will-change: transform;
 	backface-visibility: hidden;
@@ -38,7 +39,7 @@
 	left: 0;
 	top: 0;
 	z-index: 2;
-	background: radial-gradient(circle at var(--highlight-x) var(--highlight-y), #ffffff22, #00000008);
+	background: radial-gradient(circle at var(--highlight-x) var(--highlight-y), #ffffff28, #00000008);
 }
 
 .cardSideWrap:hover::after {
@@ -84,6 +85,7 @@
 	width: 100%;
 	text-align: left;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .title:hover {
@@ -137,6 +139,8 @@
 	padding: 8px 0;
 	border-radius: 15px;
 	transition: background-color 0.5s;
+	text-decoration: none;
+	text-align: center;
 }
 
 .button:hover {

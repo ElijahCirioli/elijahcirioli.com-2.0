@@ -1,12 +1,28 @@
 [
 	{
+		"title": "SAV1",
+		"date": "Winter 2023",
+		"image": "/landing/thumbnails/sav1.jpg",
+		"description": "A C library to enable simple and efficient video playback. Created as a university capstone project with Charlie Hayden and Daniel Wolnick.",
+		"buttons": [
+			{
+				"text": "Code",
+				"route": "https://github.com/SAV1-org/SAV1"
+			},
+			{
+				"text": "About",
+				"route": "https://sav1-org.github.io/SAV1/"
+			}
+		]
+	},
+	{
 		"title": "Chess Sweeper",
 		"date": "Fall 2022",
 		"image": "/landing/thumbnails/chess_sweeper.jpg",
 		"description": "A puzzle game that is a cross between chess and minesweeper. I've never been good at naming things.",
 		"buttons": [
 			{
-				"text": "View",
+				"text": "Play",
 				"route": ""
 			},
 			{
@@ -40,6 +56,26 @@
 		]
 	},
 	{
+		"title": "Zing",
+		"date": "Spring 2022",
+		"image": "/landing/thumbnails/zing.jpg",
+		"description": "A one-on-one video chatting tool built on the peer-to-peer WebRTC standard.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
 		"title": "jsFLAP",
 		"date": "Fall 2021",
 		"image": "/landing/thumbnails/jsflap.jpg",
@@ -52,13 +88,101 @@
 			{
 				"text": "Code",
 				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "RNN Predictions",
+		"date": "Fall 2021",
+		"image": "/landing/thumbnails/pyotr.jpg",
+		"description": "An LSTM machine learning model named Pyotr who is designed to predict human patterns in rock paper scissors.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Rope Simulation",
+		"date": "Summer 2021",
+		"image": "/landing/thumbnails/rope.jpg",
+		"description": "A mini-project to approximate the physics of ropes using a technique called Verlet Integration.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Pictogram",
+		"date": "Summer 2021",
+		"image": "/landing/thumbnails/pictogram.jpg",
+		"description": "A drawing-based message board inspired by PictoChat. Created with Ethan Cline and Matthew Attebery.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": "https://pictogram.onrender.com/"
+			},
+			{
+				"text": "About",
+				"route": "https://pictogram.onrender.com/about"
+			}
+		]
+	},
+	{
+		"title": "Web Dev",
+		"date": "Spring 2021",
+		"image": "/landing/thumbnails/webdev.jpg",
+		"description": "An alternate portfolio site for my web development class. Lacking real content, but a fun experiment in web design.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": "https://elijahcirioli.github.io/"
+			}
+		]
+	},
+	{
+		"title": "Public Chess",
+		"date": "Spring 2021",
+		"image": "/landing/thumbnails/chess.jpg",
+		"description": "A realtime chessboard that lets people come along and play as many moves as they'd like. Not competitive, but a fun little communal activity.",
+		"buttons": [
+			{
+				"text": "Play",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
 			}
 		]
 	},
 	{
 		"title": "Movie Ballot",
 		"date": "Spring 2021",
-		"image": "/landing/thumbnails/vote.png",
+		"image": "/landing/thumbnails/movie_ballot.jpg",
 		"description": "A multiplayer web app for voting with your friends on what to watch. Now that's what I call niche!.",
 		"buttons": [
 			{
@@ -78,8 +202,28 @@
 	{
 		"title": "3D Boids",
 		"date": "Spring 2021",
-		"image": "/landing/thumbnails/fish.png",
+		"image": "/landing/thumbnails/fish.jpg",
 		"description": "A sort of 3D fish tank made to cap off the boids trilogy. Not a lot to it, just something that's relaxing to look at.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "3D Plotter",
+		"date": "Winter 2021",
+		"image": "/landing/thumbnails/plotter.jpg",
+		"description": "A three-axis plotter that is styled after the classic children's toy. Made as a weekend mini-project to experiment working in 3D.",
 		"buttons": [
 			{
 				"text": "View",
@@ -98,8 +242,20 @@
 	{
 		"title": "Wall Climbing",
 		"date": "Winter 2020",
-		"image": "/landing/thumbnails/climbing.png",
+		"image": "/landing/thumbnails/climbing.jpg",
 		"description": "An engineering project to build small self-contained climbing devices powered by vacuum suction.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "True Shuffle",
+		"date": "Fall 2020",
+		"image": "/landing/thumbnails/shuffle.jpg",
+		"description": "A simple service that arranges a given Spotify playlist in random order.",
 		"buttons": [
 			{
 				"text": "View",
@@ -118,8 +274,56 @@
 	{
 		"title": "Micro-projects",
 		"date": "Fall 2020",
-		"image": "/landing/thumbnails/micro.png",
+		"image": "/landing/thumbnails/micro.jpg",
 		"description": "A collection of bite-sized projects from the past year or so that took no more than a couple of hours each.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Foresight",
+		"date": "Spring 2020",
+		"image": "/landing/thumbnails/foresight.jpg",
+		"description": "A stereo camera computer vision device to help improve spatial awareness for people with visual impairments. Created for ISEF with Casey Culbertson.",
+		"buttons": [
+			{
+				"text": "View",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": "https://github.com/ElijahCirioli/SpatialSpeech"
+			}
+		]
+	},
+	{
+		"title": "Asterboids",
+		"date": "Spring 2020",
+		"image": "/landing/thumbnails/asterboids.jpg",
+		"description": "A high-intensity mashup of Asteroids, Galaga, and Boids featuring online leaderboards and fast-paced arcade gameplay.",
+		"buttons": [
+			{
+				"text": "Play",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Raytracing",
+		"date": "Winter 2019",
+		"image": "/landing/thumbnails/raytracing.jpg",
+		"description": "A raytracer capable of rendering simple geometric scenes complete with reflections, shadows, and multiple light sources.",
 		"buttons": [
 			{
 				"text": "View",
@@ -136,13 +340,93 @@
 		]
 	},
 	{
-		"title": "Asterboids",
-		"date": "Spring 2020",
-		"image": "/landing/thumbnails/asterboids.png",
-		"description": "A high-intensity mashup of Asteroids, Galaga, and Boids featuring online leaderboards and fast-paced arcade gameplay.",
+		"title": "Boids",
+		"date": "Summer 2019",
+		"image": "/landing/thumbnails/boids.jpg",
+		"description": "A mini-project to simulate the emergent flock behaviour of fish and birds based on a 1987 research paper by Craig Reynolds.",
 		"buttons": [
 			{
-				"text": "View",
+				"text": "Play",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Tapecards",
+		"date": "Summer 2019",
+		"image": "/landing/thumbnails/tapecards.jpg",
+		"description": "Reusable business cards that for physical music sharing. Link them to your playlis and pass them out to your friends.",
+		"buttons": [
+			{
+				"text": "Demos",
+				"route": ""
+			},
+			{
+				"text": "Site",
+				"route": "https://www.tapecards.com"
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Tetrisn't",
+		"date": "Spring 2019",
+		"image": "/landing/thumbnails/tetrisnt.jpg",
+		"description": "A javascript Tetris-clone that's packed with features including an online learderboard system and customization settings.",
+		"buttons": [
+			{
+				"text": "Play",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "SPIRE Engine",
+		"date": "Summer 2017",
+		"image": "/landing/thumbnails/spire.jpg",
+		"description": "An early alpha tech demo for a 2D javascript game engine intended to show off camera features.",
+		"buttons": [
+			{
+				"text": "Play",
+				"route": ""
+			},
+			{
+				"text": "Code",
+				"route": ""
+			},
+			{
+				"text": "About",
+				"route": ""
+			}
+		]
+	},
+	{
+		"title": "Zombie Shooter",
+		"date": "Fall 2016",
+		"image": "/landing/thumbnails/zombie.jpg",
+		"description": "A pseudo-3D first person shooter inspired by Wolfenstein 3D. More as a showcase of raycasting technology than an enjoyable game.",
+		"buttons": [
+			{
+				"text": "Play",
 				"route": ""
 			},
 			{
