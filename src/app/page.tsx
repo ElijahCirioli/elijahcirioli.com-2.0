@@ -24,7 +24,7 @@ export default function Home() {
 				<div className={styles.aboutWrap}>
 					<Image className={styles.aboutImage} src="/landing/portrait.jpg" alt="Elijah Cirioli portrait" width="150" height="150" />
 					<p className={styles.aboutText}>
-						Hello, I'm a full-stack software engineer from Portland, Oregon. Here are a few personal projects that I enjoyed making.
+						Hello, I&#39;m a full-stack software engineer from Portland, Oregon. Here are a few personal projects that I enjoyed making.
 					</p>
 				</div>
 				<nav className={styles.nav}>
