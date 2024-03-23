@@ -7,6 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
+		"build-static": "npm run build && touch ./out/.nojekyll && echo 'new.elijahcirioli.com' > ./out/CNAME",
 		"publish": "git subtree push --prefix out origin gh-pages"
 	},
 	"dependencies": {
