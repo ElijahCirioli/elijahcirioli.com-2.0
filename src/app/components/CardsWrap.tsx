@@ -12,7 +12,7 @@ interface CardsWrapProps {
 const CardsWrap: React.FC<CardsWrapProps> = ({ projects }: CardsWrapProps) => {
 	const allUnflippedStates = () => Object.fromEntries(projects.map((project) => [project.title, false]));
 
-	const [flippedStates, setFlippedStates] = useState(allUnflippedStates());
+	const [flippedStates, setFlippedStates] = useState<Record<string, boolean>>(allUnflippedStates());
 
 	const handleMouseClick = () => {
 		setFlippedStates(allUnflippedStates());

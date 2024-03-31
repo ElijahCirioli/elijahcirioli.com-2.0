@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faShirt, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import CardsWrap from "./components/CardsWrap";
+import SettingsMenu from "./components/SettingsMenu";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 
@@ -17,13 +18,16 @@ export default function Home() {
 	return (
 		<>
 			<header className={styles.header}>
-				<Image className={styles.logo} src="/logo.png" alt="Elijah Cirioli logo" width="100" height="57" />
+				<Image id={styles.logo} src="/logo.png" alt="Elijah Cirioli logo" width="100" height="57" />
+				<div id={styles.settingsWrap}>
+					<SettingsMenu />
+				</div>
 				<h1 id={styles.title} className={fontComfortaa.className}>
 					elijah<span className={styles.greenText}>cirioli</span>
 				</h1>
-				<div className={styles.aboutWrap}>
-					<Image className={styles.aboutImage} src="/landing/portrait.jpg" alt="Elijah Cirioli portrait" width="150" height="150" />
-					<p className={styles.aboutText}>
+				<div id={styles.aboutWrap}>
+					<Image id={styles.aboutImage} src="/landing/portrait.jpg" alt="Elijah Cirioli portrait" width="150" height="150" />
+					<p id={styles.aboutText}>
 						Hello, I&#39;m a full-stack software engineer from Portland, Oregon. Here are a few personal projects that I enjoyed making.
 					</p>
 				</div>

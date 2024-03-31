@@ -23,7 +23,7 @@
 	position: relative;
 }
 
-.logo {
+#logo {
 	position: absolute;
 	top: 12px;
 	left: 15px;
@@ -32,7 +32,13 @@
 	cursor: pointer;
 }
 
-.aboutWrap {
+#settingsWrap {
+	position: absolute;
+	right: 30px;
+	top: 25px;
+}
+
+#aboutWrap {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -43,14 +49,14 @@
 	margin: 25px 0 20px 0;
 }
 
-.aboutImage {
+#aboutImage {
 	width: 150px;
 	height: auto;
 	border-radius: 50%;
 	border: 4px solid var(--light-green-color);
 }
 
-.aboutText {
+#aboutText {
 	color: var(--light-gray-color);
 	font-size: 1.1rem;
 	line-height: 1.5rem;
