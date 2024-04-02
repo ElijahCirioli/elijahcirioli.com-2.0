@@ -1,53 +1,58 @@
-#settingsMenu {
+#menu {
+	overflow: visible;
+	position: relative;
 }
 
-#settingsMenu > button {
+#menu > button {
 	display: block;
 	margin: 0 0 0 auto;
-}
-
-#settingsMenu > button:hover {
-	color: var(--white-color);
-	background-color: var(--light-green-color);
-}
-
-.collapsible {
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: flex-end;
-	gap: 10px;
-}
-
-.collapsibleHidden {
-	display: none;
-}
-
-.settingsItem {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 10px;
-}
-
-.settingsButton {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	background-color: var(--green-color);
-	color: var(--light-gray-color);
 	border: 0;
 	outline: 0;
 	cursor: pointer;
 	text-decoration: none;
 	text-align: center;
 	font-size: 22px;
-	line-height: 42px;
+	line-height: 40px;
 	box-shadow: 2px 3px 9px 0 rgba(0, 0, 0, 0.2);
 	transition: background-color 0.5s, color 0.5s;
 	position: relative;
+	z-index: 2;
+}
+
+.buttonColors {
+	background-color: var(--green-color);
+	color: var(--light-gray-color);
+}
+
+.buttonColors:hover {
+	color: var(--white-color);
+	background-color: var(--light-green-color);
+}
+
+.buttonColorsActive {
+	background-color: var(--light-gray-color);
+	color: var(--green-color);
+}
+
+.buttonColorsActive:hover {
+	background-color: var(--white-color);
+	color: var(--green-color);
+}
+
+.connectingLine {
+	background-color: var(--gray-color);
+	width: 2px;
+	height: 100px;
+	z-index: 0;
+	position: absolute;
+	right: 19px;
+	top: 20px;
+	transition: height 0.3s ease-out, opacity 0.3s, background-color 0.5s;
+}
+
+.buttonColorsActive:hover + .connectingLine {
+	background-color: var(--light-gray-color);
 }

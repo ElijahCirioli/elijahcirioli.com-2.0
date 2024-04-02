@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./SettingsMenu.module.css";
-import { UserSettings, loadUserSettings } from "../lib/UserSettings";
+import { UserSettings, defaultUserSettings, loadUserSettings } from "../lib/UserSettings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faMoon, faSun, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import SettingsMenuItem from "./SettingsMenuItem";
 
 interface SettingsMenuState {
 	isOpen: boolean;
@@ -15,43 +16,80 @@ const SettingsMenu: React.FC<{}> = () => {
 	const initialState = (): SettingsMenuState => {
 		return {
 			isOpen: false,
-			userSettings: loadUserSettings(),
+			userSettings: defaultUserSettings(),
 		};
 	};
 
 	const [menuState, setMenuState] = useState<SettingsMenuState>(initialState());
 
+	useEffect(() => {
+		setMenuState({
+			isOpen: false,
+			userSettings: loadUserSettings(),
+		});
+	}, []);
+
 	const toggleCollapse = () => {
 		setMenuState({
+			...menuState,
 			isOpen: !menuState.isOpen,
-			userSettings: menuState.userSettings,
 		});
 	};
 
-	const toggleDarkMode = () => {};
+	// TODO: close on blur
+	const closeCollapse = () => {
+		setMenuState({
+			...menuState,
+			isOpen: false,
+		});
+	};
 
-	const toggleReducedAnimations = () => {};
+	const toggleDarkMode = () => {
+		setMenuState({
+			...menuState,
+			userSettings: {
+				...menuState.userSettings,
+				useDarkMode: !menuState.userSettings.useDarkMode,
+			},
+		});
+	};
+
+	const toggleReducedAnimations = () => {
+		setMenuState({
+			...menuState,
+			userSettings: {
+				...menuState.userSettings,
+				useReducedAnimation: !menuState.userSettings.useReducedAnimation,
+			},
+		});
+	};
 
 	return (
-		<div id={styles.settingsMenu}>
-			<button onClick={toggleCollapse} className={styles.settingsButton}>
+		<div id={styles.menu}>
+			<button
+				onClick={toggleCollapse}
+				className={menuState.isOpen ? styles.buttonColorsActive : styles.buttonColors}
+			>
 				<FontAwesomeIcon icon={faGear} />
 			</button>
-			<div id={styles.collapsible} className={menuState.isOpen ? "" : styles.collapsibleHidden}>
-				<div className={styles.settingsItem}>
-					<p>Use {menuState.userSettings.useDarkMode ? "light" : "dark"} mode</p>
-					<button onClick={toggleDarkMode} className={styles.settingsButton}>
-						<FontAwesomeIcon icon={menuState.userSettings.useDarkMode ? faSun : faMoon} />
-					</button>
-				</div>
-				<div className={styles.settingsItem}>
-					<p>{menuState.userSettings.useReducedAnimation ? "Enable" : "Reduce"} animations</p>
-					<button onClick={toggleReducedAnimations} className={styles.settingsButton}>
-						<FontAwesomeIcon icon={menuState.userSettings.useReducedAnimation ? faEye : faEyeSlash} />
-					</button>
-				</div>
-				,
-			</div>
+			<div
+				className={styles.connectingLine}
+				style={{ height: `${menuState.isOpen ? 95 : 0}px`, opacity: menuState.isOpen ? 1 : 0 }}
+			></div>
+			<SettingsMenuItem
+				index={0}
+				text={`Enable ${menuState.userSettings.useDarkMode ? "light" : "dark"} mode`}
+				icon={menuState.userSettings.useDarkMode ? faSun : faMoon}
+				visible={menuState.isOpen}
+				updateSetting={toggleDarkMode}
+			/>
+			<SettingsMenuItem
+				index={1}
+				text={`${menuState.userSettings.useReducedAnimation ? "Enable" : "Reduce"} animations`}
+				icon={menuState.userSettings.useReducedAnimation ? faEye : faEyeSlash}
+				visible={menuState.isOpen}
+				updateSetting={toggleReducedAnimations}
+			/>
 		</div>
 	);
 };
