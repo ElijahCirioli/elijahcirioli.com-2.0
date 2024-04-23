@@ -2,23 +2,13 @@ import Project from "../lib/Project";
 import { listClasses } from "../lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-// import { Comfortaa, Montserrat } from "next/font/google";
-import localFont from "next/font/local";
+import { Comfortaa, Montserrat } from "next/font/google";
 import styles from "./Card.module.css";
 
-// TODO: replace these
-// const fontComfortaa = Comfortaa({
-// subsets: ["latin"],
-// });
-// const fontMontserrat = Montserrat({ subsets: ["latin"] });
-const fontComfortaa = localFont({
-	src: "../../../public/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf",
-	display: "swap",
+const fontComfortaa = Comfortaa({
+	subsets: ["latin"],
 });
-const fontMontserrat = localFont({
-	src: "../../../public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf",
-	display: "swap",
-});
+const fontMontserrat = Montserrat({ subsets: ["latin"] });
 
 interface CardProps {
 	project: Project;
@@ -57,12 +47,7 @@ const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) 
 	}
 
 	return (
-		<article
-			className={styles.card}
-			onMouseMove={handleMouseMove}
-			onMouseEnter={handleMouseMove}
-			onMouseLeave={handleMouseLeave}
-		>
+		<article className={styles.card} onMouseMove={handleMouseMove} onMouseEnter={handleMouseMove} onMouseLeave={handleMouseLeave}>
 			<div className={listClasses(...cardSideWrapClasses)} onClick={setFlipped}>
 				<div className={listClasses(styles.cardSide, styles.cardSideFront)}>
 					<Link
@@ -73,14 +58,7 @@ const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) 
 						{project.title}
 					</Link>
 					<h4 className={styles.date}>{project.date}</h4>
-					<Image
-						className={styles.image}
-						src={project.image}
-						alt={project.title}
-						width="300"
-						height="300"
-						draggable="false"
-					/>
+					<Image className={styles.image} src={project.image} alt={project.title} width="300" height="300" draggable="false" />
 				</div>
 				<div className={listClasses(styles.cardSide, styles.cardSideBack)}>
 					<h3 className={listClasses(styles.title, fontComfortaa.className)}>{project.title}</h3>

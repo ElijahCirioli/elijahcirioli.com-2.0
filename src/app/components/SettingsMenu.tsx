@@ -36,8 +36,12 @@ const SettingsMenu: React.FC<{}> = () => {
 		});
 	};
 
-	// TODO: close on blur
-	const closeCollapse = () => {
+	const handleBlur = (e: React.FocusEvent<HTMLElement>) => {
+		// ignore blur events when child has focus
+		if (e.currentTarget.contains(e.relatedTarget)) {
+			return;
+		}
+
 		setMenuState({
 			...menuState,
 			isOpen: false,
@@ -45,24 +49,10 @@ const SettingsMenu: React.FC<{}> = () => {
 	};
 
 	const toggleDarkMode = () => {
-		const colors = [
-			"light-green",
-			"green",
-			"dark-green",
-			"light-gray",
-			"gray",
-			"dark-gray",
-			"white",
-			"black",
-			"shadow",
-			"highlight",
-		];
+		const colors = ["light-green", "green", "dark-green", "light-gray", "gray", "dark-gray", "white", "black", "shadow", "highlight"];
 		const theme = menuState.userSettings.useDarkMode ? "light" : "dark";
 		for (const color of colors) {
-			document.documentElement.style.setProperty(
-				`--${color}-color`,
-				`var(--${theme}-mode-${color}-color)`
-			);
+			document.documentElement.style.setProperty(`--${color}-color`, `var(--${theme}-mode-${color}-color)`);
 		}
 		setMenuState({
 			...menuState,
@@ -84,17 +74,11 @@ const SettingsMenu: React.FC<{}> = () => {
 	};
 
 	return (
-		<div id={styles.menu}>
-			<button
-				onClick={toggleCollapse}
-				className={menuState.isOpen ? styles.buttonColorsActive : styles.buttonColors}
-			>
+		<div id={styles.menu} onBlur={handleBlur}>
+			<button onClick={toggleCollapse} className={menuState.isOpen ? styles.buttonColorsActive : styles.buttonColors}>
 				<FontAwesomeIcon icon={faGear} />
 			</button>
-			<div
-				className={styles.connectingLine}
-				style={{ height: `${menuState.isOpen ? 95 : 0}px`, opacity: menuState.isOpen ? 1 : 0 }}
-			></div>
+			<div className={styles.connectingLine} style={{ height: `${menuState.isOpen ? 95 : 0}px`, opacity: menuState.isOpen ? 1 : 0 }}></div>
 			<SettingsMenuItem
 				index={0}
 				text={`Enable ${menuState.userSettings.useDarkMode ? "light" : "dark"} mode`}
