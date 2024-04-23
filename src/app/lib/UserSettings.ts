@@ -14,8 +14,7 @@ export function defaultUserSettings(): UserSettings {
 }
 
 export function loadUserSettings(): UserSettings {
-	console.log("loading settings");
-	const useDarkMode = window.localStorage.getItem(darkModeSetting) === "true";
+	const useDarkMode = typeof window !== "undefined" && localStorage.getItem(darkModeSetting) === "true";
 	const useReducedAnimation = false;
 	return {
 		useDarkMode,
@@ -24,7 +23,14 @@ export function loadUserSettings(): UserSettings {
 }
 
 export function setDarkMode(enabled: boolean) {
-	// window.localStorage.setItem(darkModeSetting, enabled ? "true" : "false");
+	const theme = enabled ? "dark-mode-" : "";
+	const colors = ["light-green", "green", "dark-green", "light-gray", "gray", "dark-gray", "white", "black", "shadow", "highlight"];
+	for (const color of colors) {
+		document.documentElement.style.setProperty(`--theme-${color}-color`, `var(--${theme}${color}-color)`);
+	}
+	if (typeof window !== "undefined") {
+		localStorage.setItem(darkModeSetting, enabled ? "true" : "false");
+	}
 }
 
 export function setReducedAnimations(enabled: boolean) {}

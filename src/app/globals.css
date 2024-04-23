@@ -1,41 +1,41 @@
 :root {
-	--light-mode-light-green-color: #6a915d;
-	--light-mode-green-color: #546e43;
-	--light-mode-dark-green-color: #3d5031;
-	--light-mode-light-gray-color: #eaeaea;
-	--light-mode-gray-color: #cacaca;
-	--light-mode-dark-gray-color: #2c2c2c;
-	--light-mode-white-color: rgb(248, 248, 248);
-	--light-mode-black-color: rgb(15, 15, 15);
-	--light-mode-shadow-color: rgba(0, 0, 0, 0.3);
-	--light-mode-highlight-color: #ffffff28;
+	--light-green-color: #6a915d;
+	--green-color: #546e43;
+	--dark-green-color: #3d5031;
+	--light-gray-color: #eaeaea;
+	--gray-color: #cacaca;
+	--dark-gray-color: #2c2c2c;
+	--white-color: rgb(248, 248, 248);
+	--black-color: rgb(15, 15, 15);
+	--shadow-color: rgba(0, 0, 0, 0.3);
+	--highlight-color: #ffffff28;
 
-	--dark-mode-light-green-color: #546e43;
-	--dark-mode-green-color: #485e3b;
+	--dark-mode-light-green-color: #597449;
+	--dark-mode-green-color: #546e43;
 	--dark-mode-dark-green-color: #304027;
-	--dark-mode-light-gray-color: #060614;
+	--dark-mode-light-gray-color: #08080f;
 	--dark-mode-gray-color: #21212f;
-	--dark-mode-dark-gray-color: #2c2c2c;
+	--dark-mode-dark-gray-color: #1a1a1a;
 	--dark-mode-white-color: rgb(220, 220, 220);
 	--dark-mode-black-color: rgb(205, 203, 214);
 	--dark-mode-shadow-color: rgba(100, 100, 100, 0.3);
 	--dark-mode-highlight-color: #8585a228;
 
-	--light-green-color: var(--light-mode-light-green-color);
-	--green-color: var(--light-mode-green-color);
-	--dark-green-color: var(--light-mode-dark-green-color);
-	--light-gray-color: var(--light-mode-light-gray-color);
-	--gray-color: var(--light-mode-gray-color);
-	--dark-gray-color: var(--light-mode-dark-gray-color);
-	--white-color: var(--light-mode-white-color);
-	--black-color: var(--light-mode-black-color);
-	--shadow-color: var(--light-mode-shadow-color);
-	--highlight-color: var(--light-mode-highlight-color);
+	--theme-light-green-color: var(--light-green-color);
+	--theme-green-color: var(--green-color);
+	--theme-dark-green-color: var(--dark-green-color);
+	--theme-light-gray-color: var(--light-gray-color);
+	--theme-gray-color: var(--gray-color);
+	--dark-gray-color: var(--dark-gray-color);
+	--theme-white-color: var(--white-color);
+	--theme-black-color: var(--black-color);
+	--theme-shadow-color: var(--shadow-color);
+	--theme-highlight-color: var(--highlight-color);
 }
 
 body {
-	background-color: var(--light-gray-color);
-	color: var(--black-color);
+	background-color: var(--theme-light-gray-color);
+	color: var(--theme-black-color);
 	font-size: 1rem;
 	margin: 0;
 	padding: 0;

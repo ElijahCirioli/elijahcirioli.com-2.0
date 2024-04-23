@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "./SettingsMenu.module.css";
-import { UserSettings, defaultUserSettings, loadUserSettings } from "../lib/UserSettings";
+import { UserSettings, loadUserSettings, setDarkMode } from "../lib/UserSettings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faMoon, faSun, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import SettingsMenuItem from "./SettingsMenuItem";
@@ -16,18 +16,15 @@ const SettingsMenu: React.FC<{}> = () => {
 	const initialState = (): SettingsMenuState => {
 		return {
 			isOpen: false,
-			userSettings: defaultUserSettings(),
+			userSettings: loadUserSettings(),
 		};
 	};
 
 	const [menuState, setMenuState] = useState<SettingsMenuState>(initialState());
 
 	useEffect(() => {
-		setMenuState({
-			isOpen: false,
-			userSettings: loadUserSettings(),
-		});
-	}, []);
+		setDarkMode(menuState.userSettings.useDarkMode);
+	}, [menuState.userSettings.useDarkMode]);
 
 	const toggleCollapse = () => {
 		setMenuState({
@@ -49,11 +46,6 @@ const SettingsMenu: React.FC<{}> = () => {
 	};
 
 	const toggleDarkMode = () => {
-		const colors = ["light-green", "green", "dark-green", "light-gray", "gray", "dark-gray", "white", "black", "shadow", "highlight"];
-		const theme = menuState.userSettings.useDarkMode ? "light" : "dark";
-		for (const color of colors) {
-			document.documentElement.style.setProperty(`--${color}-color`, `var(--${theme}-mode-${color}-color)`);
-		}
 		setMenuState({
 			...menuState,
 			userSettings: {
