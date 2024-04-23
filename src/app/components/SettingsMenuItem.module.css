@@ -1,6 +1,6 @@
 .item {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	flex-wrap: nowrap;
 	justify-content: flex-end;
 	align-items: center;
@@ -54,6 +54,5 @@
 }
 
 .item > button:hover + p {
-	comment: TODO before sibling connector;
-	color: var(--light-green-color);
+	color: var(--light-gray-color);
 }

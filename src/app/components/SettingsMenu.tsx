@@ -45,6 +45,25 @@ const SettingsMenu: React.FC<{}> = () => {
 	};
 
 	const toggleDarkMode = () => {
+		const colors = [
+			"light-green",
+			"green",
+			"dark-green",
+			"light-gray",
+			"gray",
+			"dark-gray",
+			"white",
+			"black",
+			"shadow",
+			"highlight",
+		];
+		const theme = menuState.userSettings.useDarkMode ? "light" : "dark";
+		for (const color of colors) {
+			document.documentElement.style.setProperty(
+				`--${color}-color`,
+				`var(--${theme}-mode-${color}-color)`
+			);
+		}
 		setMenuState({
 			...menuState,
 			userSettings: {

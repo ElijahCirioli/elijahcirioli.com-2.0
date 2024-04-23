@@ -23,10 +23,10 @@ const SettingsMenuItem: React.FC<SettingsMenuItemProps> = ({
 			className={visible ? styles.item : listClasses(styles.item, styles.hidden)}
 			style={{ top: `${visible ? 50 + 44 * index : 0}px` }}
 		>
-			<p>{text}</p>
 			<button onClick={updateSetting}>
 				<FontAwesomeIcon icon={icon} />
 			</button>
+			<p>{text}</p>
 		</div>
 	);
 };
