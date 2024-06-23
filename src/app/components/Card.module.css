@@ -13,6 +13,11 @@
 	--highlight-y: "0px";
 }
 
+:global(.reducedAnimations) .card {
+	transition: none;
+	transform: none !important;
+}
+
 .card:hover {
 	filter: drop-shadow(5px 7px 10px var(--theme-shadow-color));
 }
@@ -28,6 +33,10 @@
 	will-change: transform;
 }
 
+:global(.reducedAnimations) .cardSideWrap {
+	transition: none;
+}
+
 .cardSideWrap::after {
 	content: "";
 	pointer-events: none;
@@ -39,7 +48,11 @@
 	left: 0;
 	top: 0;
 	z-index: 2;
-	background: radial-gradient(circle at var(--highlight-x) var(--highlight-y), var(--theme-highlight-color), #00000008);
+	background: radial-gradient(
+		circle at var(--highlight-x) var(--highlight-y),
+		var(--theme-highlight-color),
+		#00000008
+	);
 }
 
 .cardSideWrap:hover::after {

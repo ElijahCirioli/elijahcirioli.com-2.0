@@ -12,6 +12,10 @@
 	transition: opacity 0.4s ease-in, top 0.3s ease-out;
 }
 
+:global(.reducedAnimations) .item {
+	transition: none;
+}
+
 .hidden {
 	opacity: 0;
 	pointer-events: none;

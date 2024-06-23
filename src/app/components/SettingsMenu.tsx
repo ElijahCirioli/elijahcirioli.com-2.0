@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "./SettingsMenu.module.css";
-import { UserSettings, loadUserSettings, setDarkMode } from "../lib/UserSettings";
+import { UserSettings, loadUserSettings, setDarkMode, setReducedAnimations } from "../lib/UserSettings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faMoon, faSun, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import SettingsMenuItem from "./SettingsMenuItem";
@@ -25,6 +25,10 @@ const SettingsMenu: React.FC<{}> = () => {
 	useEffect(() => {
 		setDarkMode(menuState.userSettings.useDarkMode);
 	}, [menuState.userSettings.useDarkMode]);
+
+	useEffect(() => {
+		setReducedAnimations(menuState.userSettings.useReducedAnimations);
+	}, [menuState.userSettings.useReducedAnimations]);
 
 	const toggleCollapse = () => {
 		setMenuState({
@@ -60,7 +64,7 @@ const SettingsMenu: React.FC<{}> = () => {
 			...menuState,
 			userSettings: {
 				...menuState.userSettings,
-				useReducedAnimation: !menuState.userSettings.useReducedAnimation,
+				useReducedAnimations: !menuState.userSettings.useReducedAnimations,
 			},
 		});
 	};
@@ -80,8 +84,8 @@ const SettingsMenu: React.FC<{}> = () => {
 			/>
 			<SettingsMenuItem
 				index={1}
-				text={`${menuState.userSettings.useReducedAnimation ? "Enable" : "Reduce"} animations`}
-				icon={menuState.userSettings.useReducedAnimation ? faEye : faEyeSlash}
+				text={`${menuState.userSettings.useReducedAnimations ? "Enable" : "Reduce"} animations`}
+				icon={menuState.userSettings.useReducedAnimations ? faEye : faEyeSlash}
 				visible={menuState.isOpen}
 				updateSetting={toggleReducedAnimations}
 			/>
