@@ -2,6 +2,7 @@
 	width: 100%;
 	margin: 0;
 	padding-bottom: 50px;
+	display: block;
 }
 
 #title {
@@ -21,15 +22,14 @@
 	background-color: var(--theme-dark-green-color);
 	padding: 60px 0 32px 0;
 	position: relative;
+	width: 100%;
+	display: block;
 }
 
 #logo {
 	position: absolute;
 	top: 12px;
 	left: 15px;
-	width: 100px;
-	height: auto;
-	cursor: pointer;
 }
 
 #settingsWrap {

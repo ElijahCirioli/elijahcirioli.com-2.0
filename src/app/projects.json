@@ -23,7 +23,7 @@
 		"buttons": [
 			{
 				"text": "Play",
-				"route": ""
+				"route": "/chesssweeper"
 			},
 			{
 				"text": "Code",

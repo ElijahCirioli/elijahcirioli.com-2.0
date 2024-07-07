@@ -1,0 +1,82 @@
+#main {
+	width: 100%;
+	background: #e6edf3;
+	background: linear-gradient(180deg, #e6edf3 0%, #c4d1db 100%);
+	background: -moz-linear-gradient(180deg, #e6edf3 0%, #c4d1db 100%);
+	background: -webkit-linear-gradient(180deg, #e6edf3 0%, #c4d1db 100%);
+	background: -o-linear-gradient(180deg, #e6edf3 0%, #c4d1db 100%);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	display: block;
+	flex-grow: 1;
+
+	--red-color: #e06666;
+}
+
+#titleWrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0;
+	filter: drop-shadow(3px 5px 9px rgba(0, 0, 0, 0.25));
+	width: 100%;
+}
+
+#title {
+	background-color: var(--red-color);
+	color: #f3f3f3;
+	margin: 0;
+	font-size: 32px;
+	height: 32px;
+	padding: 12px 18px 12px 25px;
+}
+
+#titleEndCap {
+	background-color: var(--red-color);
+	height: 56px;
+	width: 30px;
+	clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+#ecLogo {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+#gameFrame {
+	border: none;
+	display: block;
+	margin: 10px auto 0 auto;
+	width: 500px;
+	height: 600px;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+	#title {
+		padding: 12px 0 10px 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	#titleEndCap {
+		display: none;
+	}
+
+	#ecLogo {
+		display: none;
+	}
+
+	#gameFrame {
+		margin-top: 0;
+		width: 100%;
+	}
+}

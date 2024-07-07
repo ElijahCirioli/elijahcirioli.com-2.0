@@ -1,0 +1,9 @@
+@media only screen and (max-width: 480px) {
+	#main-menu-wrap > .game-over-menu-button {
+		width: 160px;
+	}
+
+	#content-wrap {
+		margin-top: 40px;
+	}
+}
