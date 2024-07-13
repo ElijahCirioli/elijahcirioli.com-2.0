@@ -7,7 +7,7 @@ import projectsJson from "./projects.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faShirt, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
-import CardsWrap from "./components/CardsWrap";
+import CardsWrap from "./components/landing/CardsWrap";
 import SettingsMenu from "./components/SettingsMenu";
 import Logo from "./components/Logo";
 

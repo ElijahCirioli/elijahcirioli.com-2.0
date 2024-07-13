@@ -1,5 +1,5 @@
-import Project from "../lib/Project";
-import { listClasses } from "../lib/utils";
+import Project from "@/app/lib/Project";
+import { listClasses } from "@/app/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Comfortaa, Montserrat } from "next/font/google";
@@ -47,7 +47,12 @@ const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) 
 	}
 
 	return (
-		<article className={styles.card} onMouseMove={handleMouseMove} onMouseEnter={handleMouseMove} onMouseLeave={handleMouseLeave}>
+		<article
+			className={styles.card}
+			onMouseMove={handleMouseMove}
+			onMouseEnter={handleMouseMove}
+			onMouseLeave={handleMouseLeave}
+		>
 			<div className={listClasses(...cardSideWrapClasses)} onClick={setFlipped}>
 				<div className={listClasses(styles.cardSide, styles.cardSideFront)}>
 					<Link
@@ -58,7 +63,14 @@ const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) 
 						{project.title}
 					</Link>
 					<h4 className={styles.date}>{project.date}</h4>
-					<Image className={styles.image} src={project.image} alt={project.title} width="300" height="300" draggable="false" />
+					<Image
+						className={styles.image}
+						src={project.image}
+						alt={project.title}
+						width="300"
+						height="300"
+						draggable="false"
+					/>
 				</div>
 				<div className={listClasses(styles.cardSide, styles.cardSideBack)}>
 					<h3 className={listClasses(styles.title, fontComfortaa.className)}>{project.title}</h3>

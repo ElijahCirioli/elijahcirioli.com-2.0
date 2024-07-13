@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./CardsWrap.module.css";
-import Project from "../lib/Project";
+import Project from "@/app/lib/Project";
 import Card from "./Card";
 
 interface CardsWrapProps {

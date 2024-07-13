@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "./SettingsMenu.module.css";
-import { UserSettings, loadUserSettings, setDarkMode, setReducedAnimations } from "../lib/UserSettings";
+import { UserSettings, loadUserSettings, setDarkMode, setReducedAnimations } from "@/app/lib/UserSettings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faMoon, faSun, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import SettingsMenuItem from "./SettingsMenuItem";
@@ -71,10 +71,16 @@ const SettingsMenu: React.FC<{}> = () => {
 
 	return (
 		<div id={styles.menu} onBlur={handleBlur}>
-			<button onClick={toggleCollapse} className={menuState.isOpen ? styles.buttonColorsActive : styles.buttonColors}>
+			<button
+				onClick={toggleCollapse}
+				className={menuState.isOpen ? styles.buttonColorsActive : styles.buttonColors}
+			>
 				<FontAwesomeIcon icon={faGear} />
 			</button>
-			<div className={styles.connectingLine} style={{ height: `${menuState.isOpen ? 95 : 0}px`, opacity: menuState.isOpen ? 1 : 0 }}></div>
+			<div
+				className={styles.connectingLine}
+				style={{ height: `${menuState.isOpen ? 95 : 0}px`, opacity: menuState.isOpen ? 1 : 0 }}
+			></div>
 			<SettingsMenuItem
 				index={0}
 				text={`Enable ${menuState.userSettings.useDarkMode ? "light" : "dark"} mode`}

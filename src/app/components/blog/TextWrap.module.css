@@ -1,0 +1,35 @@
+#textWrap {
+	width: 50%;
+	min-width: 700px;
+	margin: 0;
+	padding: 40px 0 90px 0;
+	display: block;
+}
+
+#textWrap > p {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	text-indent: 2em;
+	margin: 1.2em 0;
+}
+
+#titleWrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+}
+
+#titleWrap > h1 {
+	font-weight: bold;
+	font-size: 2.2em;
+	margin: 0;
+}
+
+#titleWrap > p {
+	margin: 0;
+	font-size: 1.2em;
+	color: var(--theme-dark-gray-color);
+}
