@@ -155,7 +155,11 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": "https://elijahcirioli.github.io/"
+				"route": "/projects/webdev"
+			},
+			{
+				"text": "Code",
+				"route": "https://github.com/ElijahCirioli/ElijahCirioli.github.io"
 			}
 		]
 	},

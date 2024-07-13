@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Elijah Cirioli</title>
+
+		<link href="../style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../mobile-style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="blog-style.css" rel="stylesheet" type="text/css" media="all" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+		<link rel="manifest" href="../favicon/site.webmanifest" />
+		<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5" />
+		<link rel="shortcut icon" href="../favicon/favicon.ico" />
+		<meta name="msapplication-TileColor" content="#353a5c" />
+		<meta name="msapplication-config" content="../favicon/browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff" />
+	</head>
+	<body>
+		<div id="header">
+			<h1 id="name-header">
+				<a id="name-link" href="../">Elijah Cirioli</a>
+			</h1>
+			<div id="mountains">
+				<div class="mountain-layer" id="mountain-1"></div>
+				<div class="mountain-layer" id="mountain-2"></div>
+				<div class="mountain-layer" id="mountain-3"></div>
+				<div class="mountain-layer" id="mountain-4"></div>
+			</div>
+		</div>
+		<div id="page-wrap">
+			<a id="big-button" href="../">Home</a>
+			<div id="blog-content-wrap">
+				<div class="post">
+					<div class="post-header">
+						<h2 id="6-1-2021" class="post-title">Express and handlebars</h2>
+						<h2 class="post-date">June 1, 2021</h2>
+					</div>
+					<div class="post-body">
+						<p class="blog-text">
+							I’ve used express a lot in the past but I had never used handlebars before so this
+							assignment came with lots of new challenges. I expected the client side twit
+							template to be the more difficult part because I needed to pre-compile the
+							template into regular javascript that can be served to the client. I looked at the
+							code from class to figure out how to make a script to compile the template
+							whenever I run the server. This ended up being pretty easy and the client side
+							code to utilize the template was much shorter than the old version which was nice.
+							<br /><br />
+							I ended up spending a lot more time on the server side templates. The templates
+							and partials were easy enough to make, but it took me a few tries to get the file
+							structure right with the proper folders for the layout, views, and partials. Once
+							I figured that out, I also had to figure out how layouts actually worked. I had to
+							look up some documentation to find the proper keyword for the {{{body}}} tag. I
+							really like how easy that makes it to keep the same header and footer for every
+							page so I will definitely use them more in the future.
+							<br /><br />
+							I also think the handlebars expressions are really useful. I used a couple if
+							expressions to show and hide certain partials and I used the each expression to
+							iterate through all of the twits. This was nice because I could just pass it an
+							array of twits and it would display however many there were. This let me reuse all
+							the same templates for the page that displays a single twit because all I had to
+							do was pass in an array containing only one object.
+						</p>
+					</div>
+				</div>
+				<div class="post">
+					<div class="post-header">
+						<h2 id="5-16-2021" class="post-title">Simple node.js backend</h2>
+						<h2 class="post-date">May 16, 2021</h2>
+					</div>
+					<div class="post-body">
+						<p class="blog-text">
+							I’ve written server code using node.js a couple times before but I usually use
+							express so I wasn’t exactly used to the syntax for the normal HTTP module. It
+							isn’t that complicated so it wasn’t a big deal. I probably would really be missing
+							express if we had to make a very complicated server but for something of this
+							scale it doesn’t really matter.
+							<br /><br />
+							For this we were told to only read the contents of our files once which makes
+							sense. I’m not really happy with how I named my variables but I wasn’t really able
+							to come up with a better solution. I think in the future, especially if I have a
+							larger file system I might structure my variables as one large JSON object. This
+							could let me do subdirectories really well I think and I could name the variables
+							exactly after the actual URLs. I don’t know if this is what people actually do for
+							stuff like this, but that just sounds nice to me.
+							<br /><br />
+							I would also usually do a lot of asynchronous code using promises for something
+							like this. But that’s more if I’m doing database stuff. I decided to keep things
+							synchronous for this project for the sake of simplicity. readFileSync() is
+							technically not the fastest way to do this. I might use asynchronous reads that I
+							run all at once using Promise.all() but the difference for something like this
+							would be a couple of milliseconds at most.
+							<br /><br />
+							That’s about all there is to say for this one. Definitely simple but I liked it. I
+							usually prefer backend development.
+						</p>
+					</div>
+				</div>
+				<div class="post">
+					<div class="post-header">
+						<h2 id="5-6-2021" class="post-title">Making Tweeter JS</h2>
+						<h2 class="post-date">May 6, 2021</h2>
+					</div>
+					<div class="post-body">
+						<p class="blog-text">
+							This assignment was another pretty easy one just because it’s a lot like what I do
+							in my free time. I have been relying pretty heavily on jQuery lately so it took me
+							a second to regain my bearings in manipulating the DOM with just vanilla
+							javascript but it’s really not that bad. I used the querySelector function a lot
+							more than I usually would with this project because there were a lot of unique
+							elements that I was trying to find by their class name. I could have used the
+							getElementsByClassName() function but then I would need to add a [0] to the end
+							and who has time for that?
+							<br /><br />
+							An interesting little challenge was that we were given twits baked into the HTML
+							but we also had to add our own on top of that. Adding a twit could just push it
+							into the DOM but we were also told that searching for twits must remove all the
+							ones that don’t match completely, rather than just hiding them. What this really
+							means to me is that we need to store the twits in javascript behind the scenes. I
+							created a class to store a twit which was pretty simple because they’re just some
+							text and an author. When the page loads I find all of the twits and look through
+							their children to get the author and text. The formatting we were given includes
+							newline characters at the beginning of every twit that I needed to remove when I
+							imported them into the javascript. I just did this with substring but there’s
+							probably better ways that I could do it.
+							<br /><br />
+							Creating the twits as HTML was a bit time consuming. I used a lot of
+							createElement() and appendChild(). I would usually do this as a big template
+							string and then sanitize my inputs using jQuery, but for this I had to sanitize
+							using the textContent property. This way wasn’t hard, it’s just a lot more lines
+							of code than the usual way I would do things.
+							<br /><br />
+							Another important feature was the search functionality. We were told that it would
+							be better to make the search happen live which is nice (and it also renders the
+							search button completely useless). I’ve done live searches exactly like this in
+							the past. What I might usually do is split the search query into individual words
+							and then rank the results by how many of those terms they match but for this we
+							were just supposed to match the whole query with either the author or the text. I
+							used toLowerCase() to make sure that the search was case insensitive. I also made
+							sure to call trim() a bunch of different times in this assignment. When a field
+							isn’t supposed to be blank I didn’t want people to be able to just type a space
+							and I didn’t want trailing spaces to mess up someone’s search query.
+							<br /><br />
+							There might be even less to say about this assignment than the last one. It’s some
+							pretty standard javascript page interactions. Hopefully the next assignment will
+							be a bit more complicated.
+						</p>
+					</div>
+				</div>
+				<div class="post">
+					<div class="post-header">
+						<h2 id="4-21-2021" class="post-title">Making Tweeter CSS</h2>
+						<h2 class="post-date">April 21, 2021</h2>
+					</div>
+					<div class="post-body">
+						<p class="blog-text">
+							For this project I tried to follow good CSS practices at least to the level that I
+							understand what those are. This kind of thing is pretty easy for me because I have
+							some experience doing it. I just kinda worked my way down from the header, styling
+							things as I went. The mocks provided were pretty decent but I wish they were a
+							higher resolution. It’s hard to discern font weights and colors when the image is
+							that compressed.
+							<br /><br />
+							I guess the central question of this assignment was how to display the actual
+							twits. I use a lot of flexboxes normally and that may even be what they wanted us
+							to do here but I thought this was an application that was better suited for the
+							grid layout. I thought this mostly because we wanted all the columns to be the
+							same width. I could have done this by setting a min and max width on the twit
+							children but that seemed like a worse solution than using grid. I haven’t actually
+							worked with grid a lot so I had to look up a little bit about how to autofill them
+							columns to fit the available space. I had never used the CSS repeat function
+							before but it did the job nicely here. The assignment did say we could only have a
+							maximum of 3 columns which is actually not the case with my styling. I couldn’t
+							figure out a good way to cap the number of columns without adding more html or
+							javascript so I guess it’s just gonna be this way. I do think it’s actually better
+							that it can add as many columns as it wants to stay responsive to larger screens.
+							On a 1080p screen it should cap out at 3 but I imagine it would be more in 4k.
+							<br /><br />
+							I had also never used the “fixed” position attribute before but I at least had a
+							pretty good idea of what it did. It was a pretty obvious choice for the red button
+							because it needs to stay in the same position relative to the viewport. Years ago
+							I probably would have done that with javascript but this is undoubtedly better and
+							I will probably use it in the future.
+							<br /><br />
+							One thing I didn’t like was that the html we were given didn’t include a viewport
+							tag in the head. This means that we can’t really be sure how big a pixel is,
+							especially when we go to different sizes of screen like mobile. I usually use a
+							combination of all sorts of units, mainly percentages for widths and then some
+							pixels for heights. Because I couldn’t really be guaranteed of a pixel’s size I
+							didn’t really want to use them for this project. Instead I used rem for pretty
+							much everything here which basically means I was just using pixels with extra
+							steps. The nice thing is that if I add a viewport tag down the line then I can do
+							media queries and scale all of these pixel values at once which will be really
+							nice.
+							<br /><br />
+							Overall there’s not much to say about this one. It’s pretty simple but it was a
+							nice excuse to get more experience with proper CSS practices.
+						</p>
+					</div>
+				</div>
+				<div class="post">
+					<div class="post-header">
+						<h2 id="4-8-2021" class="post-title">Making this site</h2>
+						<h2 class="post-date">April 8, 2021</h2>
+					</div>
+					<div class="post-body">
+						<p class="blog-text">
+							I usually like to plan out what I want a website to look like before I make it,
+							either sketching it in a notebook or drawing it in a vector graphics program. This
+							site is really simple so I figured I'd just kinda start making it and see what
+							happens. I knew from the start that I wanted this to be distinct from
+							<a class="link" href="/" target="_blank">my other site</a>
+							which meant that it definitely had to be dark themed and I would need to stay far
+							away from the color green. A lot of my sites are usually very boring with a big
+							colored rectangle at the top and then all the content displayed vertically beneath
+							it. I think that's a super functional design but for this I wanted to do something
+							more visually appealing. <br /><br />
+							The design I came up to fit all these criteria with started the little mountain
+							range. I figured that would be more interesting than just a rectangle and I
+							personally think it looks really cool. I could have faked it by making it all an
+							image but I decided I would try to do a half-decent job. I drew all the different
+							layers of mountains as .svg images so they are infinitely scalable. Those images
+							then mask divs of different colors which are layered on top of one another. This
+							means that it will look good at any resolution and I can also recolor the mountain
+							range however I want using CSS (maybe I’ll add a day/night cycle or something). I
+							thought that a yellow would contrast nicely with the shades of blue I had chosen
+							and act as a nice accent color. I don’t know if people would consider this to hurt
+							the dark theme aspect of the site but I’m not too concerned about that.
+							<br /><br />
+							The other aspect of the site is the actual content. I don’t really know what I’m
+							talking about but I think the concept of “cards” is on the rise with websites. I’m
+							a big fan of the CSS flexbox feature and I had messed around with cards a little
+							bit for
+							<a class="link" href="/micro" target="_blank">a page on my other site</a>
+							so I thought I would make a sort of card carousel to display little teasers of
+							each project and then if you want to see more they can take your to their own
+							page. While I was looking for the
+							<a class="link" href="https://www.w3schools.com/" target="_blank">w3schools</a>
+							page for flexboxes again I stumbled upon the website
+							<a class="link" href="https://css-tricks.com/" target="_blank">CSS-tricks</a>.
+							They have some cards on their site that kind of overlap with each other like a
+							real deck of cards. I decided to steal this idea even though it is definitely less
+							functional than just having all the cards next to each other. You have to admit it
+							does looks pretty cool. <br /><br />The animation of the cards isn’t that
+							complicated. They have negative margins and box shadows on one side to give the
+							illusion that they’re in a stack. When you hover the mouse it moves up and I used
+							the CSS not selector to move all the other cards out of the way. I think cards are
+							pretty cool and I’m sure I’ll use them again but I probably won’t end up doing
+							this kind of stacking effect again. It’s certainly form over function but I guess
+							that’s sort of been a theme of this site. <br /><br />
+							I had never used the CSS mask feature before, but it seems like you can really do
+							a lot with it. I think I’m definitely gonna end up doing something with that in
+							the future but I’m not sure exactly what. At least by my own standards I think
+							this website actually came out pretty cool. It’s definitely sparse and I think the
+							design may breakdown as it gets more cluttered but I imagine my main site would
+							have looked a lot more like this if I had made it knowing what I do now.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../index.js"></script>
+	</body>
+</html>
