@@ -19,12 +19,13 @@ const GoToTopButton: React.FC<{}> = () => {
 		}
 	}, []);
 
-	const handleMouseClick = () => {
+	const handleMouseClick = (e: React.MouseEvent<HTMLElement>) => {
 		if (typeof window !== "undefined") {
 			window.scrollTo({
 				top: 0,
 				behavior: "smooth",
 			});
+			e.preventDefault();
 		}
 	};
 
