@@ -36,6 +36,8 @@ export function setDarkMode(enabled: boolean) {
 		"black",
 		"shadow",
 		"highlight",
+		"link",
+		"visited-link",
 	];
 	for (const color of colors) {
 		document.documentElement.style.setProperty(`--theme-${color}-color`, `var(--${theme}${color}-color)`);

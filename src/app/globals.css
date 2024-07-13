@@ -9,6 +9,8 @@
 	--black-color: rgb(15, 15, 15);
 	--shadow-color: rgba(0, 0, 0, 0.3);
 	--highlight-color: #ffffff28;
+	--link-color: #134db9;
+	--visited-link-color: #5c1785;
 
 	--dark-mode-light-green-color: #597449;
 	--dark-mode-green-color: #546e43;
@@ -20,6 +22,8 @@
 	--dark-mode-black-color: rgb(205, 203, 214);
 	--dark-mode-shadow-color: rgba(100, 100, 100, 0.3);
 	--dark-mode-highlight-color: #8585a228;
+	--dark-mode-link-color: #668ee4;
+	--dark-mode-visited-link-color: #9d6fda;
 
 	--theme-light-green-color: var(--light-green-color);
 	--theme-green-color: var(--green-color);
@@ -31,6 +35,8 @@
 	--theme-black-color: var(--black-color);
 	--theme-shadow-color: var(--shadow-color);
 	--theme-highlight-color: var(--highlight-color);
+	--theme-link-color: var(--link-color);
+	--theme-visited-link-color: var(--visited-link-color);
 }
 
 body {

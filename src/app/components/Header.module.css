@@ -1,0 +1,32 @@
+#header {
+	background-color: var(--theme-dark-green-color);
+	padding: 60px 0;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+
+#title {
+	color: var(--white-color);
+	font-weight: normal;
+	font-size: 5rem;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+}
+
+.greenText {
+	color: var(--light-green-color);
+}
+
+#logo {
+	position: absolute;
+	top: 12px;
+	left: 15px;
+}
+
+#settingsWrap {
+	position: absolute;
+	right: 30px;
+	top: 22px;
+}
