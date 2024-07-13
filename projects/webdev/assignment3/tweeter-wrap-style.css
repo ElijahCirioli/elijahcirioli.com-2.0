@@ -1,0 +1,54 @@
+.post-body {
+	position: relative;
+}
+#tweeter-frame {
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #d19f49;
+	border-radius: 10px;
+}
+#tweeter-frame-wrap {
+	width: 100%;
+	padding-top: 56.25%;
+	position: relative;
+	margin: 0 auto;
+}
+#tweeter-content-wrap {
+	width: 70%;
+	margin: 0 auto 50px auto;
+	position: relative;
+	display: block;
+}
+#blog-button {
+	width: 25%;
+	min-width: 130px;
+	margin: 20px 0 10px 0;
+}
+#fullscreen-link {
+	width: 100%;
+	text-align: center;
+	margin: 5px auto;
+	position: relative;
+	display: block;
+}
+@media only screen and (max-width: 600px) {
+	#tweeter-content-wrap {
+		width: 95%;
+	}
+	.post {
+		padding: 20px 30px;
+	}
+	#big-picture {
+		width: 50%;
+		margin: 0 0 5px 5px;
+	}
+	#blog-button {
+		width: 95%;
+		margin: 20px auto 10px auto;
+	}
+}
