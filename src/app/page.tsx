@@ -10,6 +10,7 @@ import { faShirt, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-ic
 import CardsWrap from "./components/landing/CardsWrap";
 import SettingsMenu from "./components/SettingsMenu";
 import Logo from "./components/Logo";
+import GoToTopButton from "./components/landing/GoToTopButton";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 
@@ -75,6 +76,7 @@ export default function Home() {
 				</nav>
 			</header>
 			<main id={styles.main}>
+				<GoToTopButton />
 				<CardsWrap projects={projects} />
 			</main>
 		</>

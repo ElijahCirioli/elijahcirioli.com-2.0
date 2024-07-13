@@ -30,7 +30,7 @@
 	--theme-dark-green-color: var(--dark-green-color);
 	--theme-light-gray-color: var(--light-gray-color);
 	--theme-gray-color: var(--gray-color);
-	--dark-gray-color: var(--dark-gray-color);
+	--theme-dark-gray-color: var(--dark-gray-color);
 	--theme-white-color: var(--white-color);
 	--theme-black-color: var(--black-color);
 	--theme-shadow-color: var(--shadow-color);
@@ -53,4 +53,24 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: nowrap;
+	scrollbar-color: var(--theme-green-color);
+	scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--theme-gray-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--theme-green-color);
+	border-radius: 3px;
+	cursor: ns-resize;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--theme-light-green-color);
 }
