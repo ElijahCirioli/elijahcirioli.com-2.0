@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jsFLAP</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/environment-style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/mobile-style.css" rel="stylesheet" type="text/css" media="all" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+		<link rel="manifest" href="favicon/site.webmanifest" />
+
+		<link rel="stylesheet" href="/dependencies/icons/fontawesome-free-6.5.2-web/css/all.min.css" />
+		<script src="/dependencies/jquery-3.7.1.min.js"></script>
+
+		<script src="javascript/point.js"></script>
+		<script src="javascript/gui/arrow.js"></script>
+		<script src="javascript/automata/finite/state.js"></script>
+		<script src="javascript/automata/finite/transition.js"></script>
+		<script src="javascript/automata/finite/automaton.js"></script>
+		<script src="javascript/automata/pushdown/pushdownState.js"></script>
+		<script src="javascript/automata/pushdown/pushdownTransition.js"></script>
+		<script src="javascript/automata/pushdown/pushdownAutomaton.js"></script>
+		<script src="javascript/automata/turing/turingState.js"></script>
+		<script src="javascript/automata/turing/turingTransition.js"></script>
+		<script src="javascript/automata/turing/turingAutomaton.js"></script>
+		<script src="javascript/gui/colors.js"></script>
+		<script src="javascript/gui/editor.js"></script>
+		<script src="javascript/gui/pushdownEditor.js"></script>
+		<script src="javascript/gui/turingEditor.js"></script>
+		<script src="javascript/gui/inputContainer.js"></script>
+		<script src="javascript/gui/stepInputContainer.js"></script>
+		<script src="javascript/gui/messageContainer.js"></script>
+		<script src="javascript/gui/environment.js"></script>
+		<script src="javascript/gui/popup.js"></script>
+		<script src="javascript/tools/fileParser.js"></script>
+		<script src="javascript/tools/removeUnreachableStates.js"></script>
+		<script src="javascript/tools/clipboardTools.js"></script>
+		<script src="javascript/tools/DFAConverter.js"></script>
+		<script src="javascript/tools/equivalenceTest.js"></script>
+		<script src="javascript/tools/treeLayout.js"></script>
+		<script src="javascript/tools/circleLayout.js"></script>
+		<script src="javascript/tools/forceDirectedLayout.js"></script>
+		<script src="javascript/tools/alignToGrid.js"></script>
+		<script src="javascript/tools/regexConstructor.js"></script>
+		<script src="javascript/tools/crossProduct.js"></script>
+		<script src="javascript/tools/URLTransfer.js"></script>
+		<script src="javascript/index.js"></script>
+	</head>
+	<body>
+		<div id="header-wrap">
+			<h1 id="logo"><span class="yellow-text">js</span>FLAP</h1>
+			<div id="menu-bar">
+				<div class="menu-item" id="file-menu">
+					<p class="menu-item-title">File</p>
+					<div class="menu-child-wrap">
+						<button class="menu-child-item" id="menu-new-button">New</button>
+						<button class="menu-child-item" id="menu-open-button">Open</button>
+						<button class="menu-child-item" id="menu-open-recent-button">Open recent</button>
+						<div class="menu-child-subgroup" id="menu-open-recent-subgroup"></div>
+						<button class="menu-child-item" id="menu-settings-button">Settings</button>
+						<a class="menu-child-item menu-download-link" id="menu-save-button">Save</a>
+						<button class="menu-child-item" id="menu-close-button">Close</button>
+					</div>
+				</div>
+				<div class="menu-item">
+					<p class="menu-item-title">Edit</p>
+					<div class="menu-child-wrap">
+						<button class="menu-child-item" id="menu-select-all-button">Select all</button>
+						<button class="menu-child-item" id="menu-cut-button">Cut</button>
+						<button class="menu-child-item" id="menu-copy-button">Copy</button>
+						<button class="menu-child-item" id="menu-paste-button">Paste</button>
+						<button class="menu-child-item" id="menu-undo-button">Undo</button>
+						<button class="menu-child-item" id="menu-redo-button">Redo</button>
+					</div>
+				</div>
+				<div class="menu-item">
+					<p class="menu-item-title">View</p>
+					<div class="menu-child-wrap">
+						<button class="menu-child-item" id="menu-zoom-in-button">Zoom in</button>
+						<button class="menu-child-item" id="menu-zoom-out-button">Zoom out</button>
+						<button class="menu-child-item" id="menu-zoom-fit-button">Zoom to fit</button>
+						<button class="menu-child-item" id="menu-theme-choice-button">Editor theme</button>
+					</div>
+				</div>
+				<div class="menu-item" id="tools-menu">
+					<p class="menu-item-title">Tools</p>
+					<div class="menu-child-wrap">
+						<button class="menu-child-item" id="menu-compare-equivalence-button">
+							Compare equivalence
+						</button>
+						<button class="menu-child-item" id="menu-convert-dfa-button">Convert to DFA</button>
+						<button class="menu-child-item" id="menu-layout-button">Apply layout</button>
+						<div class="menu-child-subgroup" id="menu-layout-subgroup">
+							<button
+								class="menu-child-item menu-child-subgroup-item"
+								id="menu-layout-tree-button"
+							>
+								Tree
+							</button>
+							<button
+								class="menu-child-item menu-child-subgroup-item"
+								id="menu-layout-circle-button"
+							>
+								Circle
+							</button>
+							<button
+								class="menu-child-item menu-child-subgroup-item"
+								id="menu-layout-force-directed-button"
+							>
+								Force-directed
+							</button>
+						</div>
+						<button class="menu-child-item" id="menu-remove-unreachable-button">
+							Remove unreachable states
+						</button>
+						<button class="menu-child-item" id="menu-align-to-grid-button">
+							Align states to grid
+						</button>
+						<button class="menu-child-item" id="menu-convert-regex-button">
+							Construct from RegEx
+						</button>
+						<button class="menu-child-item" id="menu-test-multiple-button" style="display: none">
+							Test multiple inputs
+						</button>
+						<button class="menu-child-item" id="menu-test-step-button">Test step-by-step</button>
+						<button class="menu-child-item" id="menu-cross-product-button">
+							Create product automaton
+						</button>
+						<div class="menu-child-subgroup" id="menu-cross-product-subgroup">
+							<button
+								class="menu-child-item menu-child-subgroup-item"
+								id="menu-cross-product-union-button"
+							>
+								Union
+							</button>
+							<button
+								class="menu-child-item menu-child-subgroup-item"
+								id="menu-cross-product-intersection-button"
+							>
+								Intersection
+							</button>
+							<button
+								class="menu-child-item menu-child-subgroup-item"
+								id="menu-cross-product-difference-button"
+							>
+								Difference
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content-wrap">
+			<div id="environment-tab-bar">
+				<button title="New environment" id="new-environment-button">
+					<i class="fas fa-plus"></i>
+				</button>
+			</div>
+		</div>
+		<div id="footer-wrap">
+			<a href="/" target="_blank" class="footer-link">Created by Elijah Cirioli </a>
+			<a href="/jsflap/about" target="_blank" class="footer-link">About</a>
+			<a href="https://github.com/ElijahCirioli/jsflap" target="_blank" class="footer-link">GitHub</a>
+			<a href="./grading" class="footer-link">Grading</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jsFLAP</title>
+		<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../css/environment-style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="../css/mobile-style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/mobile-style.css" rel="stylesheet" type="text/css" media="all" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+		<link rel="manifest" href="../favicon/site.webmanifest" />
+
+		<link rel="stylesheet" href="/dependencies/icons/fontawesome-free-6.5.2-web/css/all.min.css" />
+		<script src="/dependencies/jquery-3.7.1.min.js"></script>
+
+		<script src="../javascript/point.js"></script>
+		<script src="../javascript/gui/arrow.js"></script>
+		<script src="../javascript/automata/finite/state.js"></script>
+		<script src="../javascript/automata/finite/transition.js"></script>
+		<script src="../javascript/automata/finite/automaton.js"></script>
+		<script src="../javascript/automata/pushdown/pushdownState.js"></script>
+		<script src="../javascript/automata/pushdown/pushdownTransition.js"></script>
+		<script src="../javascript/automata/pushdown/pushdownAutomaton.js"></script>
+		<script src="../javascript/automata/turing/turingState.js"></script>
+		<script src="../javascript/automata/turing/turingTransition.js"></script>
+		<script src="../javascript/automata/turing/turingAutomaton.js"></script>
+		<script src="../javascript/gui/colors.js"></script>
+		<script src="../javascript/gui/editor.js"></script>
+		<script src="../javascript/gui/pushdownEditor.js"></script>
+		<script src="../javascript/gui/turingEditor.js"></script>
+		<script src="../javascript/gui/inputContainer.js"></script>
+		<script src="../javascript/gui/stepInputContainer.js"></script>
+		<script src="../javascript/gui/messageContainer.js"></script>
+		<script src="../javascript/gui/environment.js"></script>
+		<script src="../javascript/gui/popup.js"></script>
+		<script src="../javascript/tools/fileParser.js"></script>
+		<script src="../javascript/tools/removeUnreachableStates.js"></script>
+		<script src="../javascript/tools/clipboardTools.js"></script>
+		<script src="../javascript/tools/DFAConverter.js"></script>
+		<script src="../javascript/tools/equivalenceTest.js"></script>
+		<script src="../javascript/tools/treeLayout.js"></script>
+		<script src="../javascript/tools/circleLayout.js"></script>
+		<script src="../javascript/tools/forceDirectedLayout.js"></script>
+		<script src="../javascript/tools/URLTransfer.js"></script>
+		<script src="javascript/automatonFile.js"></script>
+		<script src="javascript/automatonLoader.js"></script>
+		<script src="javascript/testCase.js"></script>
+		<script src="javascript/gradingInputContainer.js"></script>
+		<script src="javascript/testCaseLoader.js"></script>
+		<script src="javascript/index.js"></script>
+	</head>
+	<body>
+		<div id="header-wrap">
+			<a href="../" id="logo-link">
+				<h1 id="logo"><span class="yellow-text">js</span>FLAP</h1>
+			</a>
+		</div>
+		<div id="content-wrap">
+			<div class="grading-item" id="automata-panel" tabindex="0">
+				<h1 class="environment-sidebar-title">Automata</h1>
+				<div class="grading-item-content">
+					<div id="automata-table-wrap">
+						<table class="grading-table" border="0" cellspacing="0" cellpadding="0">
+							<thead class="grading-table-head" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<th>File</th>
+									<th>Name</th>
+									<th>Score</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody
+								id="automata-table-body"
+								border="0"
+								cellspacing="0"
+								cellpadding="0"
+							></tbody>
+						</table>
+					</div>
+					<button class="inputs-button" id="load-files-button">Load files</button>
+				</div>
+			</div>
+			<div class="grading-item" id="inputs-panel">
+				<h1 class="environment-sidebar-title">Test cases</h1>
+				<div class="grading-item-content">
+					<div id="grading-input-options">
+						<p class="grading-input-options-label">Type:</p>
+						<div class="environment-dropdown-container">
+							<div class="dropdown-down-arrow">
+								<i class="fas fa-chevron-down"></i>
+							</div>
+							<div class="dropdown-up-arrow">
+								<i class="fas fa-chevron-up"></i>
+							</div>
+							<div class="environment-dropdown" tabindex="1">
+								<button class="dropdown-item dropdown-selected">Finite</button>
+								<button class="dropdown-item">Pushdown</button>
+								<button class="dropdown-item">Turing</button>
+							</div>
+						</div>
+						<p class="grading-input-options-label" id="allow-nondeterminism-label">
+							Allow nondeterminism:
+						</p>
+						<button id="allow-nondeterminism" class="checkbox checkbox-checked" tabindex="2">
+							<i class="fa-solid fa-check"></i>
+						</button>
+					</div>
+					<form id="grading-input-form">
+						<table class="grading-table" border="0" cellspacing="0" cellpadding="0">
+							<thead class="grading-table-head" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<th>Input</th>
+									<th>Expected</th>
+									<th>Actual</th>
+									<th>Passed</th>
+								</tr>
+							</thead>
+							<tbody id="input-table-body" border="0" cellspacing="0" cellpadding="0"></tbody>
+						</table>
+					</form>
+					<div id="grading-input-buttons-wrap">
+						<button class="inputs-button" id="load-input-file-button">Load inputs</button>
+						<a class="inputs-button" id="save-input-file-button">Save inputs</a>
+						<button class="inputs-button" id="input-lambda-button">λ</button>
+						<button class="inputs-button" id="input-clear-button">Clear</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer-wrap">
+			<a href="/" target="_blank" class="footer-link">Created by Elijah Cirioli </a>
+			<a href="/jsflap/about" target="_blank" class="footer-link">About</a>
+			<a href="https://github.com/ElijahCirioli/jsflap" target="_blank" class="footer-link">GitHub</a>
+			<a href="./" class="footer-link">Grading</a>
+		</div>
+	</body>
+</html>
