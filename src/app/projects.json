@@ -43,15 +43,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/projects/minimap"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/minimap"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/projects/minimap/about"
 			}
 		]
 	},

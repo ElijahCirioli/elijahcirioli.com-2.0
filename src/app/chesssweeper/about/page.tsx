@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "./page.module.css";
 import TextWrap from "@/app/components/blog/TextWrap";
 import Header from "@/app/components/Header";
 
