@@ -83,15 +83,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/jsflap"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/jsflap"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/jsflap/about"
 			}
 		]
 	},

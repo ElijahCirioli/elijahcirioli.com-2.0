@@ -25,6 +25,16 @@
 	color: var(--theme-visited-link-color);
 }
 
+#textWrap ul {
+	margin: 0 15px;
+	line-height: 1.8em;
+	font-size: 1.2em;
+}
+
+#textWrap li::marker {
+	color: var(--theme-black-color);
+}
+
 #titleWrap {
 	display: flex;
 	flex-direction: row;

@@ -17,7 +17,10 @@
 }
 @font-face {
 	font-family: "Fredoka One";
-	src: url("/dependencies/fonts/Fredoka_One/Fredoka[wdth,wght].ttf");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/dependencies/fonts/Fredoka_One/Fredoka.woff2") format("woff2");
 }
 body {
 	background-color: var(--white);
@@ -62,9 +65,9 @@ header {
 	color: var(--white);
 	font-family: "Fredoka One", cursive;
 	font-weight: bold;
-	font-size: 34px;
+	font-size: 32px;
 	height: 30px;
-	line-height: 26px;
+	line-height: 28px;
 	margin: 0;
 }
 .green-text {
