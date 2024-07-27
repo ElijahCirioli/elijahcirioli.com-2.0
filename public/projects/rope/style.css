@@ -1,0 +1,86 @@
+@font-face {
+	font-family: "Comfortaa";
+	src: url("/dependencies/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf");
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+#simulation-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	margin: 4px;
+}
+#simulation-canvas {
+	background: rgb(249, 246, 234);
+	background: radial-gradient(circle, rgba(249, 246, 234, 1) 0%, rgba(219, 214, 180, 1) 100%);
+	cursor: url("./cursor.png") 4 4, auto;
+	outline: 4px solid #3d5031;
+}
+#button-controls {
+	display: flex;
+	flex-direction: row;
+	margin-top: 12px;
+	justify-content: space-between;
+}
+#tool-button-wrap {
+	display: flex;
+	flex-direction: row;
+	width: 105px;
+	justify-content: space-between;
+}
+.tool-button {
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 3px 3px 4px rgb(0 0 0 / 50%);
+	transition: 0.1s;
+	border-radius: 5px;
+	background-color: #a2b1b8;
+	color: #556266;
+	text-align: center;
+}
+.tool-button:hover {
+	transform: scale(1.05);
+	background-color: #b6c5cc;
+}
+.tool-button:active {
+	transform: scale(0.97);
+}
+.active-button {
+	background-color: #c7d1d4;
+	color: #e6372e;
+}
+.active-button:hover {
+	background-color: #d1dde0;
+}
+.text-button {
+	height: 30px;
+	line-height: 32px;
+	margin: 0 5px;
+	padding: 0 10px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 3px 3px 4px rgb(0 0 0 / 50%);
+	transition: 0.1s;
+	border-radius: 5px;
+	background-color: #c7d1d4;
+	color: #556266;
+	text-align: center;
+	font-family: "Comfortaa", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+.text-button:hover {
+	transform: scale(1.05);
+	background-color: #d1dde0;
+}
+.text-button:active {
+	transform: scale(0.97);
+}
+#run-button {
+	width: 175px;
+}

@@ -14,18 +14,15 @@ export default function Home() {
 					finite state automata. It allows the construction and simulation of different types of
 					finite automata, including Turing machines. It is inspired in part by a Java program
 					called{" "}
-					<a href="https://www.jflap.org/" target="_blank">
+					<Link href="https://www.jflap.org/" target="_blank">
 						JFLAP
-					</a>{" "}
+					</Link>{" "}
 					that is widely used in education about the theory of computation. This project became my
 					undergraduate thesis for the Oregon State University Honors College.
 				</p>
 				<ul>
 					<li>
-						<Link
-							href="https://ir.library.oregonstate.edu/concern/honors_college_theses/pv63g7611"
-							target="_blank"
-						>
+						<Link href="https://ir.library.oregonstate.edu/concern/honors_college_theses/pv63g7611">
 							Thesis Archive
 						</Link>
 					</li>

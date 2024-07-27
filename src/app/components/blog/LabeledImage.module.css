@@ -1,0 +1,38 @@
+#imageWrap {
+	margin: 5px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 6px;
+}
+
+#imageWrap > img {
+	border: 3px solid var(--theme-dark-green-color);
+	border-radius: 3px;
+	width: calc(100% - 6px);
+	height: auto;
+}
+
+#imageWrap > a {
+	color: var(--theme-black-color);
+	text-decoration: none;
+	font-size: 0.8em;
+	margin: 0;
+	width: 100%;
+}
+
+#imageWrap > a:hover {
+	text-decoration: underline;
+}
+
+#imageWrap > a:visited {
+	color: var(--theme-black-color);
+}
+
+#imageWrap > p {
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 1.3em;
+}

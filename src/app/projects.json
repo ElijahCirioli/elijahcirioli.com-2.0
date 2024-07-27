@@ -119,15 +119,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/rope"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/verlet-integration"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/rope/about"
 			}
 		]
 	},

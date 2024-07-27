@@ -1,0 +1,8 @@
+#simulationFrame {
+	border: none;
+	display: block;
+	margin: 80px auto 0 auto;
+	width: 508px;
+	height: 460px;
+	overflow: hidden;
+}
