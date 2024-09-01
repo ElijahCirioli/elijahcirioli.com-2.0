@@ -63,15 +63,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/projects/zing"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/zing-video-chat"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/zing/about"
 			}
 		]
 	},
@@ -103,11 +103,11 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/projects/predictions"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/machine-learning-predictions"
 			}
 		]
 	},
@@ -211,15 +211,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/fish"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/3D-Boids"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/fish/about"
 			}
 		]
 	},

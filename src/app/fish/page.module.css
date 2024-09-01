@@ -1,0 +1,10 @@
+#simulationFrame {
+	border: none;
+	display: block;
+	margin: 80px auto 0 auto;
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+	border: 5px solid var(--theme-green-color);
+	border-radius: 4px;
+}

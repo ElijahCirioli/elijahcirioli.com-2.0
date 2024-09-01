@@ -1,0 +1,10 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 400px;
+	overflow: hidden;
+}
+
+#myCanvas {
+	background: radial-gradient(farthest-side, #f0e9d1, #eddc98);
+}
