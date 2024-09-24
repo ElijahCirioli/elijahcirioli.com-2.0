@@ -5,7 +5,9 @@ import Link from "next/link";
 import { Comfortaa, Montserrat } from "next/font/google";
 import styles from "./Card.module.css";
 
-const fontComfortaa = Comfortaa({ subsets: ["latin"] });
+const fontComfortaa = Comfortaa({
+	subsets: ["latin"],
+});
 const fontMontserrat = Montserrat({ subsets: ["latin"] });
 
 interface CardProps {
@@ -45,55 +47,50 @@ const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) 
 	}
 
 	return (
-		<div className={styles.cardAndShadow}>
-			<article
-				className={styles.card}
-				onMouseMove={handleMouseMove}
-				onMouseEnter={handleMouseMove}
-				onMouseLeave={handleMouseLeave}
-			>
-				<div className={listClasses(...cardSideWrapClasses)} onClick={setFlipped}>
-					<div className={listClasses(styles.cardSide, styles.cardSideFront)}>
-						<Link
-							className={listClasses(styles.title, fontComfortaa.className)}
-							href={project.buttons[0]?.route ?? ""}
-							onClick={handleLinkClick}
-						>
-							{project.title}
-						</Link>
-						<h4 className={styles.date}>{project.date}</h4>
-						<Image
-							className={styles.image}
-							src={project.image}
-							alt={project.title}
-							width="300"
-							height="300"
-							draggable="false"
-						/>
-					</div>
-					<div className={listClasses(styles.cardSide, styles.cardSideBack)}>
-						<h3 className={listClasses(styles.title, fontComfortaa.className)}>
-							{project.title}
-						</h3>
-						<h4 className={styles.date}>{project.date}</h4>
-						<p className={styles.description}>{project.description}</p>
-						<div className={styles.buttonsWrap}>
-							{project.buttons.map((button) => (
-								<Link
-									className={listClasses(styles.button, fontMontserrat.className)}
-									key={button.text}
-									href={button.route}
-									onClick={handleLinkClick}
-								>
-									{button.text}
-								</Link>
-							))}
-						</div>
+		<article
+			className={styles.card}
+			onMouseMove={handleMouseMove}
+			onMouseEnter={handleMouseMove}
+			onMouseLeave={handleMouseLeave}
+		>
+			<div className={listClasses(...cardSideWrapClasses)} onClick={setFlipped}>
+				<div className={listClasses(styles.cardSide, styles.cardSideFront)}>
+					<Link
+						className={listClasses(styles.title, fontComfortaa.className)}
+						href={project.buttons[0]?.route ?? ""}
+						onClick={handleLinkClick}
+					>
+						{project.title}
+					</Link>
+					<h4 className={styles.date}>{project.date}</h4>
+					<Image
+						className={styles.image}
+						src={project.image}
+						alt={project.title}
+						width="300"
+						height="300"
+						draggable="false"
+					/>
+				</div>
+				<div className={listClasses(styles.cardSide, styles.cardSideBack)}>
+					<h3 className={listClasses(styles.title, fontComfortaa.className)}>{project.title}</h3>
+					<h4 className={styles.date}>{project.date}</h4>
+					<p className={styles.description}>{project.description}</p>
+					<div className={styles.buttonsWrap}>
+						{project.buttons.map((button) => (
+							<Link
+								className={listClasses(styles.button, fontMontserrat.className)}
+								key={button.text}
+								href={button.route}
+								onClick={handleLinkClick}
+							>
+								{button.text}
+							</Link>
+						))}
 					</div>
 				</div>
-			</article>
-			<div className={styles.shadow}></div>
-		</div>
+			</div>
+		</article>
 	);
 };
 
