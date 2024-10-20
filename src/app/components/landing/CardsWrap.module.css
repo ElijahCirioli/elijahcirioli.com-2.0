@@ -11,3 +11,11 @@
 	gap: 55px;
 	perspective: 1500px;
 }
+
+@media (max-width: 600px) {
+	#cardsWrap {
+		width: 92%;
+		padding: 35px 4% 40px 4%;
+		gap: 40px;
+	}
+}
