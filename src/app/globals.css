@@ -2,6 +2,7 @@
 	--light-green-color: #6a915d;
 	--green-color: #546e43;
 	--dark-green-color: #3d5031;
+	--darker-green-color: #293622;
 	--light-gray-color: #eaeaea;
 	--gray-color: #cacaca;
 	--dark-gray-color: #2c2c2c;
@@ -28,6 +29,7 @@
 	--theme-light-green-color: var(--light-green-color);
 	--theme-green-color: var(--green-color);
 	--theme-dark-green-color: var(--dark-green-color);
+	--theme-darker-green-color: var(--darker-green-color);
 	--theme-light-gray-color: var(--light-gray-color);
 	--theme-gray-color: var(--gray-color);
 	--theme-dark-gray-color: var(--dark-gray-color);

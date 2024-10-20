@@ -20,9 +20,11 @@ export default function Home() {
 	return (
 		<>
 			<header className={styles.header}>
-				<Logo id={styles.logo} />
-				<div id={styles.settingsWrap}>
-					<SettingsMenu />
+				<div id={styles.headerTopBar}>
+					<Logo id={styles.logo} />
+					<div id={styles.settingsWrap}>
+						<SettingsMenu />
+					</div>
 				</div>
 				<h1 id={styles.title} className={fontComfortaa.className}>
 					elijah<span className={styles.greenText}>cirioli</span>

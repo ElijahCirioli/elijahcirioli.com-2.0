@@ -70,7 +70,7 @@ const SettingsMenu: React.FC<{}> = () => {
 	};
 
 	return (
-		<div id={styles.menu} onBlur={handleBlur}>
+		<div id={styles.menu} className={menuState.isOpen ? styles.menuOpen : ""} onBlur={handleBlur}>
 			<button
 				onClick={toggleCollapse}
 				className={menuState.isOpen ? styles.buttonColorsActive : styles.buttonColors}

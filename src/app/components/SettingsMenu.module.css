@@ -60,3 +60,10 @@
 .buttonColorsActive:hover + .connectingLine {
 	background-color: var(--light-gray-color);
 }
+
+@media (max-width: 600px) {
+	.menuOpen {
+		padding-bottom: 102px;
+		transition: padding-bottom 0.3s ease-out;
+	}
+}

@@ -9,8 +9,8 @@ export interface UserSettings {
 export function defaultUserSettings(): UserSettings {
 	return {
 		useDarkMode: false,
-		useReducedAnimations: window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 600px)")
-			.matches,
+		useReducedAnimations:
+			window && window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 600px)").matches,
 	};
 }
 
