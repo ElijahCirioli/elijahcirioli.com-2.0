@@ -9,8 +9,7 @@ export interface UserSettings {
 export function defaultUserSettings(): UserSettings {
 	return {
 		useDarkMode: false,
-		useReducedAnimations:
-			window && window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 600px)").matches,
+		useReducedAnimations: window && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
 	};
 }
 
@@ -30,6 +29,7 @@ export function setDarkMode(enabled: boolean) {
 		"light-green",
 		"green",
 		"dark-green",
+		"darker-green",
 		"light-gray",
 		"gray",
 		"dark-gray",

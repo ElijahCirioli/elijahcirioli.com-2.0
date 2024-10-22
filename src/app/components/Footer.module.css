@@ -1,7 +1,7 @@
 .footer {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 20px;
 	align-items: center;
@@ -23,4 +23,18 @@
 
 .link:hover {
 	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	.footer {
+		gap: 15px;
+		font-size: 0.8rem;
+		width: 96%;
+		padding: 15px 2%;
+		height: fit-content;
+	}
+
+	.footer > p {
+		margin: 0;
+	}
 }

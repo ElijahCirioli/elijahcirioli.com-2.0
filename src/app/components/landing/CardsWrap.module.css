@@ -2,7 +2,7 @@
 	width: 76%;
 	margin: 0;
 	padding-bottom: 100px;
-	padding: 50px 12% 50px 12%;
+	padding: 50px 12% 60px 12%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -15,7 +15,7 @@
 @media (max-width: 600px) {
 	#cardsWrap {
 		width: 92%;
-		padding: 35px 4% 40px 4%;
+		padding: 35px 4% 60px 4%;
 		gap: 40px;
 	}
 }
