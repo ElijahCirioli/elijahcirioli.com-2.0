@@ -18,27 +18,12 @@
 	color: var(--light-green-color);
 }
 
-.header {
+#header {
 	background-color: var(--theme-dark-green-color);
 	padding: 0 0 32px 0;
 	position: relative;
 	width: 100%;
 	display: block;
-}
-
-#headerTopBar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: 12px 15px 0 15px;
-	margin: 0;
-	width: calc(100% - 30px);
-}
-
-#settingsWrap {
-	margin-right: 15px;
-	margin-top: 10px;
 }
 
 #aboutWrap {
@@ -126,31 +111,13 @@
 }
 
 @media (max-width: 600px) {
-	#headerTopBar {
-		background-color: var(--theme-darker-green-color);
-	}
-
 	#title {
 		font-size: 3.6rem;
 		margin-top: 20px;
 	}
 
-	#logo {
-		transform: scale(0.75);
-	}
-
-	#settingsWrap {
-		margin-right: 10px;
-		margin-top: 9px;
-	}
-
-	.header {
+	#header {
 		padding: 0 0 20px 0;
-	}
-
-	#headerTopBar {
-		padding: 3px 4px 3px 4px;
-		width: calc(100% - 8px);
 	}
 
 	#aboutWrap {

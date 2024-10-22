@@ -1,16 +1,12 @@
 import { Comfortaa } from "next/font/google";
 import styles from "./Header.module.css";
-import Logo from "./Logo";
-import SettingsMenu from "./SettingsMenu";
+import HeaderNavBar from "./HeaderNavBar";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 
 const Header: React.FC<{}> = () => (
 	<header id={styles.header}>
-		<Logo id={styles.logo} />
-		<div id={styles.settingsWrap}>
-			<SettingsMenu />
-		</div>
+		<HeaderNavBar />
 		<h1 id={styles.title} className={fontComfortaa.className}>
 			elijah<span className={styles.greenText}>cirioli</span>
 		</h1>

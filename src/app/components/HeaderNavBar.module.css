@@ -1,0 +1,31 @@
+#headerNavBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 12px 15px 0 15px;
+	margin: 0;
+	width: calc(100% - 30px);
+}
+
+#settingsWrap {
+	margin-right: 15px;
+	margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+	#headerNavBar {
+		background-color: var(--theme-darker-green-color);
+		padding: 3px 4px 3px 4px;
+		width: calc(100% - 8px);
+	}
+
+	#logo {
+		transform: scale(0.75);
+	}
+
+	#settingsWrap {
+		margin-right: 10px;
+		margin-top: 9px;
+	}
+}

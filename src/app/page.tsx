@@ -8,8 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faShirt, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import CardsWrap from "./components/landing/CardsWrap";
-import SettingsMenu from "./components/SettingsMenu";
-import Logo from "./components/Logo";
+import HeaderNavBar from "./components/HeaderNavBar";
 import GoToTopButton from "./components/landing/GoToTopButton";
 import { listClasses } from "./lib/utils";
 
@@ -20,13 +19,8 @@ export default function Home() {
 
 	return (
 		<>
-			<header className={styles.header}>
-				<div id={styles.headerTopBar}>
-					<Logo id={styles.logo} />
-					<div id={styles.settingsWrap}>
-						<SettingsMenu />
-					</div>
-				</div>
+			<header id={styles.header}>
+				<HeaderNavBar />
 				<h1 id={styles.title} className={fontComfortaa.className}>
 					elijah<span className={styles.greenText}>cirioli</span>
 				</h1>

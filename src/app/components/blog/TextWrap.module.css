@@ -42,6 +42,7 @@
 	justify-content: space-between;
 	align-items: flex-end;
 	width: 100%;
+	gap: 10px;
 }
 
 #titleWrap > h1 {
@@ -54,4 +55,36 @@
 	margin: 0;
 	font-size: 1.2em;
 	opacity: 0.8;
+	text-align: right;
+}
+
+@media (max-width: 600px) {
+	#textWrap {
+		width: 86%;
+		min-width: unset;
+		margin: 0 auto;
+		padding: 35px 0 110px 0;
+		display: block;
+	}
+
+	#textWrap > p {
+		font-size: 1em;
+		line-height: 1.5em;
+		text-indent: 1.8em;
+		margin: 1.2em 0;
+	}
+
+	#titleWrap > h1 {
+		font-size: 1.6em;
+	}
+
+	#titleWrap > p {
+		font-size: 1em;
+	}
+
+	#textWrap ul {
+		margin: 0 10px;
+		line-height: 1.8em;
+		font-size: 1.1em;
+	}
 }
