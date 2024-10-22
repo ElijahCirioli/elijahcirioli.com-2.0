@@ -11,6 +11,7 @@ import CardsWrap from "./components/landing/CardsWrap";
 import SettingsMenu from "./components/SettingsMenu";
 import Logo from "./components/Logo";
 import GoToTopButton from "./components/landing/GoToTopButton";
+import { listClasses } from "./lib/utils";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 
@@ -68,7 +69,7 @@ export default function Home() {
 						<p className={styles.navLinkTitle}>Email</p>
 					</Link>
 					<Link
-						className={styles.navLink}
+						className={listClasses(styles.navLink, styles.navLinkSmaller)}
 						href="https://www.etsy.com/shop/elijahciriolidotcom"
 						target="_blank"
 					>
