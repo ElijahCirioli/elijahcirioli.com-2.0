@@ -271,7 +271,7 @@
 			},
 			{
 				"text": "About",
-				"route": "/projects/trueshuffle/about"
+				"route": "/trueshuffle/about"
 			}
 		]
 	},
