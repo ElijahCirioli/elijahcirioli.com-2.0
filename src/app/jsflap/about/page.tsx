@@ -9,11 +9,10 @@ export default function Home() {
 			<Header />
 			<TextWrap title="About jsFLAP" date="Fall 2021">
 				<p>
-					I created the JavaScript Formal Languages and Automata Package (jsFLAP) to be used as an
-					educational tool for learning about the theory of computation, formal languages, and
-					finite state automata. It allows the construction and simulation of different types of
-					finite automata, including Turing machines. It is inspired in part by a Java program
-					called{" "}
+					I created the JavaScript Formal Languages and Automata Package (jsFLAP) to be used as an educational
+					tool for learning about the theory of computation, formal languages, and finite state automata. It
+					allows the construction and simulation of different types of finite automata, including Turing
+					machines. It is inspired in part by a Java program called{" "}
 					<Link href="https://www.jflap.org/" target="_blank">
 						JFLAP
 					</Link>{" "}

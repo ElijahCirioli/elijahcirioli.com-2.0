@@ -36,3 +36,9 @@
 	text-align: center;
 	line-height: 1.3em;
 }
+
+@media (max-width: 600px) {
+	#imageWrap > a {
+		font-size: 0.7em;
+	}
+}

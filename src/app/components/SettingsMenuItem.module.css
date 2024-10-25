@@ -9,7 +9,9 @@
 	right: 2px;
 	opacity: 1;
 	z-index: 1;
-	transition: opacity 0.4s ease-in, top 0.3s ease-out;
+	transition:
+		opacity 0.4s ease-in,
+		top 0.3s ease-out;
 }
 
 :global(.reducedAnimations) .item {
@@ -49,7 +51,9 @@
 	font-size: 16px;
 	line-height: 30px;
 	box-shadow: 2px 3px 9px 0 rgba(0, 0, 0, 0.2);
-	transition: background-color 0.5s, color 0.5s;
+	transition:
+		background-color 0.5s,
+		color 0.5s;
 }
 
 .item > button:hover {

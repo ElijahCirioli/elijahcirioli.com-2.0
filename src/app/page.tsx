@@ -33,8 +33,8 @@ export default function Home() {
 						height="150"
 					/>
 					<p id={styles.aboutText}>
-						Hello, I&#39;m a full-stack software engineer from Portland, Oregon. Here are a few
-						personal projects that I enjoyed making.
+						Hello, I&#39;m a full-stack software engineer from Portland, Oregon. Here are a few personal
+						projects that I enjoyed making.
 					</p>
 				</div>
 				<nav className={styles.nav}>
@@ -50,11 +50,7 @@ export default function Home() {
 						<FontAwesomeIcon icon={faLinkedin} />
 						<p className={styles.navLinkTitle}>LinkedIn</p>
 					</Link>
-					<Link
-						className={styles.navLink}
-						href="/landing/Elijah_Cirioli_Resume.pdf"
-						target="_blank"
-					>
+					<Link className={styles.navLink} href="/landing/Elijah_Cirioli_Resume.pdf" target="_blank">
 						<FontAwesomeIcon icon={faFileLines} />
 						<p className={styles.navLinkTitle}>Résumé</p>
 					</Link>

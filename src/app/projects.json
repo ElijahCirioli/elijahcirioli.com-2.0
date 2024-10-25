@@ -263,15 +263,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/projects/trueshuffle"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/spotifytrueshuffle"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/projects/trueshuffle/about"
 			}
 		]
 	},

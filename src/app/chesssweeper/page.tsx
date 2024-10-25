@@ -14,11 +14,7 @@ export default function Home() {
 				<div id={styles.titleEndCap}></div>
 				<Logo id={styles.ecLogo} />
 			</div>
-			<iframe
-				id={styles.gameFrame}
-				src="/projects/chesssweeper/index.html"
-				title="The chesssweeper game"
-			/>
+			<iframe id={styles.gameFrame} src="/projects/chesssweeper/index.html" title="The chesssweeper game" />
 		</main>
 	);
 }
