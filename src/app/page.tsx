@@ -1,16 +1,16 @@
-import Project from "./lib/Project";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faFileLines, faShirt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Comfortaa } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { Comfortaa } from "next/font/google";
+import Project from "@/lib/Project";
+import { listClasses } from "@/lib/utils";
+import HeaderNavBar from "@/components/HeaderNavBar";
+import CardsWrap from "@/components/landing/CardsWrap";
+import GoToTopButton from "@/components/landing/GoToTopButton";
 import styles from "./page.module.css";
 import projectsJson from "./projects.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faShirt, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
-import CardsWrap from "./components/landing/CardsWrap";
-import HeaderNavBar from "./components/HeaderNavBar";
-import GoToTopButton from "./components/landing/GoToTopButton";
-import { listClasses } from "./lib/utils";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 

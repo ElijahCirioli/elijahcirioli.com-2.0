@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import styles from "./GoToTopButton.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import styles from "./GoToTopButton.module.css";
 
-const GoToTopButton: React.FC<{}> = () => {
+const GoToTopButton: React.FC = () => {
 	const [isButtonVisible, setButtonVisible] = useState<boolean>(false);
 	const ref = useRef<HTMLAnchorElement | null>(null);
 

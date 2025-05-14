@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import styles from "./SettingsMenu.module.css";
-import { UserSettings, loadUserSettings, setDarkMode, setReducedAnimations } from "@/app/lib/UserSettings";
+import { faEye, faEyeSlash, faGear, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear, faMoon, faSun, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import SettingsMenuItem from "./SettingsMenuItem";
+import { useEffect, useState } from "react";
+import { UserSettings, loadUserSettings, setDarkMode, setReducedAnimations } from "@/lib/UserSettings";
+import SettingsMenuItem from "@/components/SettingsMenuItem";
+import styles from "./SettingsMenu.module.css";
 
 interface SettingsMenuState {
 	isOpen: boolean;

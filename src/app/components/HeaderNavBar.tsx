@@ -1,6 +1,6 @@
+import Logo from "@/components/Logo";
+import SettingsMenu from "@/components/SettingsMenu";
 import styles from "./HeaderNavBar.module.css";
-import SettingsMenu from "./SettingsMenu";
-import Logo from "./Logo";
 
 const HeaderNavBar: React.FC<{}> = () => {
 	return (

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Footer from "./components/Footer";
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import Footer from "@/components/Footer";
+import "./globals.css";
 
 config.autoAddCss = false;
 

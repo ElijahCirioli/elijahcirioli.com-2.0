@@ -1,8 +1,8 @@
-import Project from "@/app/lib/Project";
-import { listClasses } from "@/app/lib/utils";
+import { Comfortaa, Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { Comfortaa, Montserrat } from "next/font/google";
+import Project from "@/lib/Project";
+import { listClasses } from "@/lib/utils";
 import styles from "./Card.module.css";
 
 const fontComfortaa = Comfortaa({

@@ -1,5 +1,5 @@
-import Logo from "@/app/components/Logo";
 import { Josefin_Sans } from "next/font/google";
+import Logo from "@/components/Logo";
 import styles from "./page.module.css";
 
 const fontJosefinSans = Josefin_Sans({ subsets: ["latin"] });

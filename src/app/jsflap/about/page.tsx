@@ -1,7 +1,7 @@
 import Link from "next/link";
-import TextWrap from "@/app/components/blog/TextWrap";
-import Header from "@/app/components/Header";
-import FileLink from "@/app/components/blog/FileLink";
+import Header from "@/components/Header";
+import FileLink from "@/components/blog/FileLink";
+import TextWrap from "@/components/blog/TextWrap";
 
 export default function Home() {
 	return (

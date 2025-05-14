@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Project from "@/lib/Project";
+import Card from "@/components/landing/Card";
 import styles from "./CardsWrap.module.css";
-import Project from "@/app/lib/Project";
-import Card from "./Card";
 
 interface CardsWrapProps {
 	projects: Project[];

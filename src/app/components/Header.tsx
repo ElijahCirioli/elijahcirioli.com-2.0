@@ -1,6 +1,6 @@
 import { Comfortaa } from "next/font/google";
+import HeaderNavBar from "@/components/HeaderNavBar";
 import styles from "./Header.module.css";
-import HeaderNavBar from "./HeaderNavBar";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 

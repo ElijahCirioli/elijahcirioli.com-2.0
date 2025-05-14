@@ -1,7 +1,7 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import styles from "./SettingsMenuItem.module.css";
-import { listClasses } from "@/app/lib/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { listClasses } from "@/lib/utils";
+import styles from "./SettingsMenuItem.module.css";
 
 interface SettingsMenuItemProps {
 	index: number;

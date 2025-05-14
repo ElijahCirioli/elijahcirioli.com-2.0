@@ -1,5 +1,5 @@
-import TextWrap from "@/app/components/blog/TextWrap";
-import Header from "@/app/components/Header";
+import Header from "@/components/Header";
+import TextWrap from "@/components/blog/TextWrap";
 
 export default function Home() {
 	return (

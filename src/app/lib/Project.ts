@@ -1,4 +1,4 @@
-import ProjectButton from "./ProjectButton";
+import ProjectButton from "@/lib/ProjectButton";
 
 interface Project {
 	title: string;
