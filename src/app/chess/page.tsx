@@ -5,12 +5,8 @@ export default function Home() {
 	return (
 		<>
 			<Header />
-			<main>
-				<iframe
-					id={styles.simulationFrame}
-					src="/projects/fish/index.html"
-					title="The 3D boids fishtank simulation"
-				/>
+			<main id={styles.main}>
+				<iframe id={styles.chessFrame} src="/projects/chess/index.html" title="The public chess board" />
 			</main>
 		</>
 	);

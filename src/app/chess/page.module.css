@@ -1,0 +1,22 @@
+#main {
+	width: 100%;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	background-image: linear-gradient(to bottom, #ccdadb, #b5c6c7);
+}
+
+:global(.globalDarkMode) #main {
+	background-image: linear-gradient(to bottom, #233a40, #051322);
+}
+
+#chessFrame {
+	border: none;
+	outline: none;
+	display: block;
+	flex-grow: 1;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}

@@ -43,6 +43,12 @@ export function setDarkMode(enabled: boolean) {
 	for (const color of colors) {
 		document.documentElement.style.setProperty(`--theme-${color}-color`, `var(--${theme}${color}-color)`);
 	}
+	if (enabled) {
+		document.documentElement.classList.add("globalDarkMode");
+	} else {
+		document.documentElement.classList.remove("globalDarkMode");
+	}
+
 	if (typeof window !== "undefined") {
 		localStorage.setItem(darkModeSetting, enabled ? "true" : "false");
 	}

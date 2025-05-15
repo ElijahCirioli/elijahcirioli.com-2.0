@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
-const Footer: React.FC<{}> = () => (
+const Footer: React.FC = () => (
 	<footer className={styles.footer}>
 		<p>©{new Date().getFullYear()} Elijah Cirioli</p>
 		<Link className={styles.link} href="/">

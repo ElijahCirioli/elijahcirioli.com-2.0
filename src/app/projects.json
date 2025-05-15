@@ -171,15 +171,15 @@
 		"buttons": [
 			{
 				"text": "Play",
-				"route": ""
+				"route": "/chess"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/BetterPublicChess"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/chess/about"
 			}
 		]
 	},

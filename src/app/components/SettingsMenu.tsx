@@ -12,7 +12,7 @@ interface SettingsMenuState {
 	userSettings: UserSettings;
 }
 
-const SettingsMenu: React.FC<{}> = () => {
+const SettingsMenu: React.FC = () => {
 	const initialState = (): SettingsMenuState => {
 		return {
 			isOpen: false,

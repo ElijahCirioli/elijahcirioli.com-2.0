@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 
 const fontComfortaa = Comfortaa({ subsets: ["latin"] });
 
-const Header: React.FC<{}> = () => (
+const Header: React.FC = () => (
 	<header id={styles.header}>
 		<HeaderNavBar />
 		<h1 id={styles.title} className={fontComfortaa.className}>
