@@ -1,0 +1,9 @@
+#plotterFrame {
+	border: none;
+	display: block;
+	margin: 60px auto 0 auto;
+	padding-bottom: 100px;
+	width: 610px;
+	height: 850px;
+	overflow: hidden;
+}

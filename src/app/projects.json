@@ -231,15 +231,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/plotter"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/3D-etch-a-sketch"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/plotter/about"
 			}
 		]
 	},

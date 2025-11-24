@@ -1,15 +1,4 @@
-import {
-	EventDispatcher,
-	MOUSE,
-	Quaternion,
-	Spherical,
-	TOUCH,
-	Vector2,
-	Vector3,
-	Plane,
-	Ray,
-	MathUtils,
-} from "three";
+import { EventDispatcher, MOUSE, MathUtils, Plane, Quaternion, Ray, Spherical, TOUCH, Vector2, Vector3 } from "three";
 
 // OrbitControls performs orbiting, dollying (zooming), and panning.
 // Unlike TrackballControls, it maintains the "up" direction object.up (+Y by default).
@@ -280,10 +269,7 @@ class OrbitControls extends EventDispatcher {
 						mouseBefore.unproject(scope.object);
 
 						const prevZoom = scope.object.zoom;
-						scope.object.zoom = Math.max(
-							scope.minZoom,
-							Math.min(scope.maxZoom, scope.object.zoom / scale)
-						);
+						scope.object.zoom = Math.max(scope.minZoom, Math.min(scope.maxZoom, scope.object.zoom / scale));
 						scope.object.updateProjectionMatrix();
 
 						zoomChanged = prevZoom !== scope.object.zoom;
@@ -328,10 +314,7 @@ class OrbitControls extends EventDispatcher {
 					}
 				} else if (scope.object.isOrthographicCamera) {
 					const prevZoom = scope.object.zoom;
-					scope.object.zoom = Math.max(
-						scope.minZoom,
-						Math.min(scope.maxZoom, scope.object.zoom / scale)
-					);
+					scope.object.zoom = Math.max(scope.minZoom, Math.min(scope.maxZoom, scope.object.zoom / scale));
 
 					if (prevZoom !== scope.object.zoom) {
 						scope.object.updateProjectionMatrix();
@@ -507,22 +490,16 @@ class OrbitControls extends EventDispatcher {
 				} else if (scope.object.isOrthographicCamera) {
 					// orthographic
 					panLeft(
-						(deltaX * (scope.object.right - scope.object.left)) /
-							scope.object.zoom /
-							element.clientWidth,
+						(deltaX * (scope.object.right - scope.object.left)) / scope.object.zoom / element.clientWidth,
 						scope.object.matrix
 					);
 					panUp(
-						(deltaY * (scope.object.top - scope.object.bottom)) /
-							scope.object.zoom /
-							element.clientHeight,
+						(deltaY * (scope.object.top - scope.object.bottom)) / scope.object.zoom / element.clientHeight,
 						scope.object.matrix
 					);
 				} else {
 					// camera neither orthographic nor perspective
-					console.warn(
-						"WARNING: OrbitControls.js encountered an unknown camera type - pan disabled."
-					);
+					console.warn("WARNING: OrbitControls.js encountered an unknown camera type - pan disabled.");
 					scope.enablePan = false;
 				}
 			};
@@ -532,9 +509,7 @@ class OrbitControls extends EventDispatcher {
 			if (scope.object.isPerspectiveCamera || scope.object.isOrthographicCamera) {
 				scale /= dollyScale;
 			} else {
-				console.warn(
-					"WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled."
-				);
+				console.warn("WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.");
 				scope.enableZoom = false;
 			}
 		}
@@ -543,9 +518,7 @@ class OrbitControls extends EventDispatcher {
 			if (scope.object.isPerspectiveCamera || scope.object.isOrthographicCamera) {
 				scale *= dollyScale;
 			} else {
-				console.warn(
-					"WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled."
-				);
+				console.warn("WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.");
 				scope.enableZoom = false;
 			}
 		}
@@ -566,11 +539,7 @@ class OrbitControls extends EventDispatcher {
 			mouse.x = (dx / w) * 2 - 1;
 			mouse.y = -(dy / h) * 2 + 1;
 
-			dollyDirection
-				.set(mouse.x, mouse.y, 1)
-				.unproject(scope.object)
-				.sub(scope.object.position)
-				.normalize();
+			dollyDirection.set(mouse.x, mouse.y, 1).unproject(scope.object).sub(scope.object.position).normalize();
 		}
 
 		function clampDistance(dist) {
