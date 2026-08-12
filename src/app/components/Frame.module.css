@@ -1,0 +1,11 @@
+.frame {
+	overflow: hidden;
+	display: block;
+	border: none;
+	margin: 0 auto;
+}
+
+.border {
+	border: 5px solid var(--theme-green-color);
+	border-radius: 4px;
+}

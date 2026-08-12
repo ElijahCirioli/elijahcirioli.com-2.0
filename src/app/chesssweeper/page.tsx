@@ -1,4 +1,5 @@
 import { Josefin_Sans } from "next/font/google";
+import Frame from "@/components/Frame";
 import Logo from "@/components/Logo";
 import styles from "./page.module.css";
 
@@ -14,7 +15,13 @@ export default function Home() {
 				<div id={styles.titleEndCap}></div>
 				<Logo id={styles.ecLogo} />
 			</div>
-			<iframe id={styles.gameFrame} src="/projects/chesssweeper/index.html" title="The chesssweeper game" />
+			<Frame
+				src="/projects/chesssweeper/index.html"
+				title="The chesssweeper game"
+				width={500}
+				height={600}
+				marginTop={10}
+			/>
 		</main>
 	);
 }

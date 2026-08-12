@@ -1,0 +1,15 @@
+#controls {
+	text-align: center;
+	margin-top: 20px;
+	padding-bottom: 50px;
+}
+
+#controls > h2 {
+	font-size: 22px;
+	margin: 10px;
+}
+
+#controls > p {
+	font-size: 18px;
+	margin: 10px;
+}

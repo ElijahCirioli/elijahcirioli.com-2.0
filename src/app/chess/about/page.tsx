@@ -11,8 +11,8 @@ export default function Home() {
 					A while back I teased a trilogy of chess-related projects and it seemed like implementing the game
 					of chess itself was a good place to start. I had two main goals for this project: I wanted to see
 					how hard it was to program chess, and I wanted to expand on what I did in{" "}
-					<a href="/projects/vote/">Movie Ballot</a> where I implemented real time multiplayer using{" "}
-					<a href="https://firebase.google.com/">Google Firebase.</a>
+					<Link href="/projects/vote/">Movie Ballot</Link> where I implemented real time multiplayer using{" "}
+					<Link href="https://firebase.google.com/">Google Firebase.</Link>
 				</p>
 				<p>
 					The game of chess serves as a good exercise in object-oriented programming. I started by creating a
@@ -65,9 +65,9 @@ export default function Home() {
 					like the 2D array that’s used in the game logic, but rather just a list of each piece which has an x
 					and y coordinate stored with it along with a type, color, and whether it has moved. The state of a
 					chess game is commonly represented using{" "}
-					<a href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">
+					<Link href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">
 						Forsyth-Edwards Notation
-					</a>
+					</Link>
 					. This is nice for many reasons, especially because it is fairly concise, but I chose not to use it
 					here. I would rather use the hierarchical json structure that I have access to rather than encoding
 					everything as characters in a string. FEN does store a lot of the same information such as who can
@@ -89,9 +89,9 @@ export default function Home() {
 					I think the user interface came out pretty well. There is a bit of a clash between the square and
 					rounded elements, but the use of animation and shadows is pretty nice in my opinion. The art for the
 					pieces is the same{" "}
-					<a href="https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces">
+					<Link href="https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces">
 						Wikimedia Commons chess pieces
-					</a>{" "}
+					</Link>{" "}
 					that are used in all sorts of places. I’d love to make my own set at some point but I don’t have the
 					artistic skill for that just yet. Towards the end of the project I figured that it would be nice to
 					have a chat feature to make the game feel a little bit less lonely. This didn’t use the same

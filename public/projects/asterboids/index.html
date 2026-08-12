@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Asterboids</title>
+
+		<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+
+		<script src="/dependencies/jquery-3.7.1.min.js"></script>
+
+		<script src="/dependencies/firebase/firebase-app.js"></script>
+		<script src="/dependencies/firebase/firebase-firestore.js"></script>
+	</head>
+	<body>
+		<script>
+			const firebaseConfig = {
+				apiKey: "AIzaSyCbc9kQkz8CBzJUnagrpffYItNIqP6bhl0",
+				authDomain: "elijah-cirioli-scoreboards.firebaseapp.com",
+				projectId: "elijah-cirioli-scoreboards",
+				storageBucket: "elijah-cirioli-scoreboards.appspot.com",
+				messagingSenderId: "1010484196559",
+				appId: "1:1010484196559:web:3a86ba82f2c5abdedef3ba",
+			};
+
+			firebase.initializeApp(firebaseConfig);
+			const storage = firebase.firestore();
+		</script>
+		<div id="canvasHolder">
+			<canvas id="backgroundCanvas" class="canvas" width="800" height="600" z-index="1"></canvas>
+			<canvas id="mainCanvas" class="canvas" width="800" height="600" z-index="2"></canvas>
+			<canvas id="particleCanvas" class="canvas" width="800" height="600" z-index="3"></canvas>
+			<canvas id="hudCanvas" class="canvas" width="800" height="600" z-index="4"></canvas>
+			<script src="./BufferLoader.js"></script>
+			<script src="./Player.js"></script>
+			<script src="./Camera.js"></script>
+			<script src="./ExhaustParticle.js"></script>
+			<script src="./ExplosionParticle.js"></script>
+			<script src="./Bullet.js"></script>
+			<script src="./Asteroid.js"></script>
+			<script src="./BoidParticle.js"></script>
+			<script src="./BossParticle.js"></script>
+			<script src="./Boid.js"></script>
+			<script src="./Boss.js"></script>
+			<script src="./JumpParticle.js"></script>
+			<script src="./LongParticle.js"></script>
+			<script src="./JumpTrailParticle.js"></script>
+			<script src="./Powerup.js"></script>
+			<script src="./Hud.js"></script>
+			<script src="./Vec.js"></script>
+			<script src="./Director.js"></script>
+			<script src="./Menu.js"></script>
+			<script src="./asterboids.js"></script>
+		</div>
+	</body>
+</html>

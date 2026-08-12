@@ -1,0 +1,22 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("/dependencies/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+.canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#canvasHolder {
+	margin: 0;
+	padding: 0;
+	width: 800px;
+	height: 600px;
+	display: block;
+	position: relative;
+	background-image: url("./art/outdated.png");
+}
+body {
+	margin: 0;
+	padding: 0;
+}

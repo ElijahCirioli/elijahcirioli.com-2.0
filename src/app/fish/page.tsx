@@ -1,15 +1,18 @@
+import Frame from "@/components/Frame";
 import Header from "@/components/Header";
-import styles from "./page.module.css";
 
 export default function Home() {
 	return (
 		<>
 			<Header />
 			<main>
-				<iframe
-					id={styles.simulationFrame}
+				<Frame
 					src="/projects/fish/index.html"
 					title="The 3D boids fishtank simulation"
+					width={600}
+					height={400}
+					hasBorder={true}
+					marginTop={80}
 				/>
 			</main>
 		</>

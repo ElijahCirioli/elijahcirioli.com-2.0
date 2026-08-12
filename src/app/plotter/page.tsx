@@ -1,12 +1,18 @@
+import Frame from "@/components/Frame";
 import Header from "@/components/Header";
-import styles from "./page.module.css";
 
 export default function Home() {
 	return (
 		<>
 			<Header />
 			<main>
-				<iframe id={styles.plotterFrame} src="/projects/plotter/index.html" title="The 3D etch-a-skethc" />
+				<Frame
+					src="/projects/plotter/index.html"
+					title="The 3D etch-a-sketch"
+					width={610}
+					height={900}
+					marginTop={60}
+				/>
 			</main>
 		</>
 	);

@@ -311,15 +311,15 @@
 		"buttons": [
 			{
 				"text": "Play",
-				"route": ""
+				"route": "/asterboids"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/Asterboids"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/asterboids/about"
 			}
 		]
 	},
