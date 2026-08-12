@@ -331,15 +331,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/raytracing"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/js-raytracing"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/raytracing/about"
 			}
 		]
 	},

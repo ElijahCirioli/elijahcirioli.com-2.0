@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "Playfair Display";
+	src: url("/dependencies/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+.haiku {
+	font-family: "Playfair Display", serif;
+	margin: 0.5em auto;
+	font-size: 1.8em;
+	line-height: 1.6em;
+	font-style: italic;
+	text-align: center;
+}
+
+.haiku > p {
+	margin: 0 auto;
+}
+
+#reflectionWrap {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	overflow: auto;
+	gap: 0.6em;
+	margin: 0 auto;
+}
