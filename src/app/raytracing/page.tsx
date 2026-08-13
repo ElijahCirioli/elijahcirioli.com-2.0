@@ -1,19 +1,12 @@
-import Frame from "@/components/Frame";
 import Header from "@/components/Header";
+import styles from "./page.module.css";
 
 export default function Home() {
 	return (
 		<>
 			<Header />
 			<main>
-				<Frame
-					src="/projects/raytracing/index.html"
-					title="The Raytracing engine"
-					width={1240}
-					height={613}
-					marginTop={80}
-					hasBorder={false}
-				/>
+				<iframe id={styles.frame} src="/projects/raytracing/index.html" title="The Raytracing engine" />
 			</main>
 		</>
 	);
