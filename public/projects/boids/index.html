@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Boids</title>
+		<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+		<div id="canvasHolder">
+			<canvas id="myCanvas" width="1000" height="700"></canvas>
+			<div id="controls">
+				<button id="resetButton">RESET</button>
+				<div class="labeledControl">
+					<div id="switchButtonWrap">
+						<button id="createButton" class="switchButton selectedButton">CREATE</button>
+						<button id="scatterButton" class="switchButton">SCATTER</button>
+					</div>
+					<p>Mouse mode</p>
+				</div>
+				<div>
+					<button id="debugButton" class="grayButton"></button>
+					<p id="debugLabel">SHOW DEBUG</p>
+				</div>
+				<div class="labeledControl">
+					<input type="range" min="2" max="100" value="40" class="slider" id="speedSlider" />
+					<p>Speed</p>
+				</div>
+				<div class="labeledControl">
+					<input type="range" min="0" max="100" value="50" class="slider" id="inertiaSlider" />
+					<p>Inertia</p>
+				</div>
+				<canvas id="triCanvas" width="160" height="160"></canvas>
+			</div>
+			<script src="boids.js"></script>
+		</div>
+	</body>
+</html>

@@ -26,7 +26,9 @@
 	--dark-mode-highlight-color: #8585a228;
 	--dark-mode-link-color: #668ee4;
 	--dark-mode-visited-link-color: #9d6fda;
+}
 
+[data-theme="light"] {
 	--theme-light-green-color: var(--light-green-color);
 	--theme-green-color: var(--green-color);
 	--theme-dark-green-color: var(--dark-green-color);
@@ -40,6 +42,22 @@
 	--theme-highlight-color: var(--highlight-color);
 	--theme-link-color: var(--link-color);
 	--theme-visited-link-color: var(--visited-link-color);
+}
+
+[data-theme="dark"] {
+	--theme-light-green-color: var(--dark-mode-light-green-color);
+	--theme-green-color: var(--dark-mode-green-color);
+	--theme-dark-green-color: var(--dark-mode-dark-green-color);
+	--theme-darker-green-color: var(--dark-mode-darker-green-color);
+	--theme-light-gray-color: var(--dark-mode-light-gray-color);
+	--theme-gray-color: var(--dark-mode-gray-color);
+	--theme-dark-gray-color: var(--dark-mode-dark-gray-color);
+	--theme-white-color: var(--dark-mode-white-color);
+	--theme-black-color: var(--dark-mode-black-color);
+	--theme-shadow-color: var(--dark-mode-shadow-color);
+	--theme-highlight-color: var(--dark-mode-highlight-color);
+	--theme-link-color: var(--dark-mode-link-color);
+	--theme-visited-link-color: var(--dark-mode-visited-link-color);
 }
 
 body {

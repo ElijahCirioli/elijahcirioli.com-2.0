@@ -6,6 +6,7 @@ body {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 	height: 100%;
+	color: var(--ec-theme-black-color, rgb(15, 15, 15));
 }
 #sketch-wrap {
 	position: relative;
@@ -13,9 +14,9 @@ body {
 	padding: 0 0 0 0;
 	width: 600px;
 	height: 500px;
-	border: 5px solid #3a5032;
+	border: 5px solid var(--ec-theme-green-color, #546e43);
 	border-radius: 4px;
-	background-color: #3a5032;
+	background-color: var(--ec-theme-green-color, #546e43);
 }
 #myCanvas {
 	background: radial-gradient(#e0e2e4, #c2c6cc);

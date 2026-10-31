@@ -3,6 +3,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Footer from "@/components/Footer";
+import UserSettingsProvider from "@/components/UserSettingsProvider";
 import "./globals.css";
 
 config.autoAddCss = false;
@@ -72,10 +73,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" data-theme="light" suppressHydrationWarning>
 			<body className={fontMontserrat.className}>
-				{children}
-				<Footer />
+				<UserSettingsProvider>
+					{children}
+					<Footer />
+				</UserSettingsProvider>
 			</body>
 		</html>
 	);

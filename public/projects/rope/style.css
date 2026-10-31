@@ -15,8 +15,10 @@ body {
 #simulation-canvas {
 	background: rgb(249, 246, 234);
 	background: radial-gradient(circle, rgba(249, 246, 234, 1) 0%, rgba(219, 214, 180, 1) 100%);
-	cursor: url("./cursor.png") 4 4, auto;
-	outline: 4px solid #3d5031;
+	cursor:
+		url("./cursor.png") 4 4,
+		auto;
+	outline: 4px solid var(--ec-theme-green-color, #546e43);
 }
 #button-controls {
 	display: flex;

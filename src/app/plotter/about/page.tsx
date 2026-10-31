@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import TextWrap from "@/components/blog/TextWrap";
-import styles from "./page.module.css";
 
 export default function Home() {
 	return (

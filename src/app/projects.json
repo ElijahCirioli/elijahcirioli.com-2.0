@@ -351,15 +351,15 @@
 		"buttons": [
 			{
 				"text": "Play",
-				"route": ""
+				"route": "/boids"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/js-boids"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/boids/about"
 			}
 		]
 	},
