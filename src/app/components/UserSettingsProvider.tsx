@@ -21,8 +21,6 @@ const UserSettingsProvider: React.FC<{
 	const reducedAnimationsSetting = "ec-use-reduced-animations";
 
 	function setDarkMode(enabled: boolean) {
-		setDarkModeState(enabled);
-
 		if (typeof window !== "undefined") {
 			document.documentElement.setAttribute("data-theme", enabled ? "dark" : "light");
 			if (enabled) {
@@ -32,11 +30,11 @@ const UserSettingsProvider: React.FC<{
 			}
 			localStorage.setItem(darkModeSetting, enabled ? "true" : "false");
 		}
+
+		setDarkModeState(enabled);
 	}
 
 	function setReducedAnimations(enabled: boolean) {
-		setReducedAnimationsState(enabled);
-
 		if (typeof window !== "undefined") {
 			if (enabled) {
 				document.body.classList.add("reducedAnimations");
@@ -45,6 +43,8 @@ const UserSettingsProvider: React.FC<{
 			}
 			localStorage.setItem(reducedAnimationsSetting, enabled ? "true" : "false");
 		}
+
+		setReducedAnimationsState(enabled);
 	}
 
 	useEffect(() => {

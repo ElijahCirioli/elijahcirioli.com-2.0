@@ -41,6 +41,7 @@ function Predator(x, y, life) {
 function update() {
 	moveBoids();
 	draw();
+	drawTriangle();
 }
 
 //update the velocity vectors of all boids and move
@@ -328,7 +329,6 @@ document.getElementById("resetButton").onclick = function (e) {
 	triX = 80;
 	triY = 58.33;
 	boids = [];
-	drawTriangle();
 	init();
 };
 //mouse mode buttons
@@ -390,7 +390,9 @@ function drawTriangle() {
 	triCon.arc(triX, triY, 7, 0, 2 * Math.PI);
 	triCon.fill();
 
-	triCon.fillStyle = "#383838";
+	const documentStyle = getComputedStyle(document.documentElement);
+	const blackColor = documentStyle.getPropertyValue("--ec-theme-black-color").trim();
+	triCon.fillStyle = blackColor || "rgb(15, 15, 15)";
 	triCon.textAlign = "center";
 	triCon.font = "11px Arial";
 	triCon.fillText("Sep", 22.265, 8);
@@ -405,7 +407,6 @@ triCan.onmousedown = function (e) {
 	var mY = e.offsetY;
 	triMouseDown = true;
 	moveTri(mX, mY);
-	drawTriangle();
 };
 triCan.onmouseup = function (e) {
 	triMouseDown = false;
@@ -419,7 +420,6 @@ triCan.onmousemove = function (e) {
 	if (triMouseDown) {
 		moveTri(mX, mY);
 	}
-	drawTriangle();
 };
 function moveTri(x, y) {
 	//see if it can move to the new coordinates
@@ -439,7 +439,6 @@ function moveTri(x, y) {
 	alignmentWeight = 2 - getDistance(triX, triY, 137.735, 25) / 67.37;
 	cohesionWeight = 2 - getDistance(triX, triY, 80, 125) / 67.37;
 }
-drawTriangle();
 
 init();
 var thread = setInterval(update, 1000 / 60);
