@@ -46,16 +46,16 @@ export default function Home() {
 					refused to use HTML because I knew Javascript better. I will concede that this was a bad choice, but
 					I didn’t know much of anything about HTML at the time, it was before the creation of this website
 					after all. The menus again took a lot of math, especially detecting whether the user is mousing over
-					something, but there was no written planning involved. I used one variable I called "state" to track
-					every possible thing the player could be doing within the menu including highlighting every possible
-					element. This was far from the best choice since it became hard to keep track of what every state
-					represented in my head by the end, but it was a simple system that I would still stand by for
-					smaller menus at least.
+					something, but there was no written planning involved. I used one variable I called
+					&quot;state&quot; to track every possible thing the player could be doing within the menu including
+					highlighting every possible element. This was far from the best choice since it became hard to keep
+					track of what every state represented in my head by the end, but it was a simple system that I would
+					still stand by for smaller menus at least.
 				</p>
 				<p>
-					After completing the menus I figured that the game was ready for "release". I bought the domain{" "}
-					<Link href="www.elijahcirioli.com">www.elijahcirioli.com</Link> and created this site. Well, it
-					didn’t really look like this. But it quickly became popular, at least within my computer science
+					After completing the menus I figured that the game was ready for &quot;release&quot;. I bought the
+					domain <Link href="www.elijahcirioli.com">www.elijahcirioli.com</Link> and created this site. Well,
+					it didn’t really look like this. But it quickly became popular, at least within my computer science
 					class. At this point I decided to commit further time to improving the game and adding features. I’d
 					sporadically add new gameplay options like swappable block palettes, and my own custom system for
 					Delayed Auto-Shift (DAS) with which I could customize the movement delay. I would also commission my

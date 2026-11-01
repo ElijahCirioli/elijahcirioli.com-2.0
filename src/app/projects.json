@@ -191,15 +191,15 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/projects/movieballot"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/movie-ballot"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/movieballot/about"
 			}
 		]
 	},
