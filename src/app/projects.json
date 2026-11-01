@@ -391,15 +391,15 @@
 		"buttons": [
 			{
 				"text": "Play",
-				"route": ""
+				"route": "/tetrisnt"
 			},
 			{
 				"text": "Code",
-				"route": ""
+				"route": "https://github.com/ElijahCirioli/Tetrisnt"
 			},
 			{
 				"text": "About",
-				"route": ""
+				"route": "/tetrisnt/about"
 			}
 		]
 	},

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Tetrisn't</title>
+
+		<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+
+		<script src="/dependencies/jquery-3.7.1.min.js"></script>
+
+		<script src="/dependencies/firebase/firebase-app.js"></script>
+		<script src="/dependencies/firebase/firebase-firestore.js"></script>
+
+		<link rel="prefetch" as="image" href="Tile1.png" />
+		<link rel="prefetch" as="image" href="Tile2.png" />
+		<link rel="prefetch" as="image" href="Tile3.png" />
+		<link rel="prefetch" as="image" href="Tile4.png" />
+		<link rel="prefetch" as="image" href="Tile5.png" />
+	</head>
+	<body oncontextmenu="return false;">
+		<script>
+			const firebaseConfig = {
+				apiKey: "AIzaSyCbc9kQkz8CBzJUnagrpffYItNIqP6bhl0",
+				authDomain: "elijah-cirioli-scoreboards.firebaseapp.com",
+				projectId: "elijah-cirioli-scoreboards",
+				storageBucket: "elijah-cirioli-scoreboards.appspot.com",
+				messagingSenderId: "1010484196559",
+				appId: "1:1010484196559:web:3a86ba82f2c5abdedef3ba",
+			};
+
+			firebase.initializeApp(firebaseConfig);
+			const storage = firebase.firestore();
+		</script>
+		<div id="canvasHolder">
+			<canvas id="layer1" width="600" height="640"></canvas>
+			<canvas id="layer2" width="600" height="640"></canvas>
+			<script src="tetrisnt.js"></script>
+		</div>
+	</body>
+</html>
