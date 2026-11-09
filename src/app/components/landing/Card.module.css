@@ -103,6 +103,11 @@
 	text-decoration: none;
 }
 
+.title > a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
 .title:hover {
 	text-decoration: underline;
 }

@@ -283,7 +283,7 @@
 		"buttons": [
 			{
 				"text": "View",
-				"route": ""
+				"route": "/micro"
 			}
 		]
 	},

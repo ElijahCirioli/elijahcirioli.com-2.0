@@ -1,0 +1,18 @@
+#carouselWrap {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#carousel {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	gap: 4em;
+	padding: 50px 0;
+}

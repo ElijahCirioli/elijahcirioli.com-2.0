@@ -1,0 +1,57 @@
+.project {
+	position: relative;
+	display: block;
+	background-color: var(--theme-gray-color);
+	color: var(--theme-black-color);
+	outline: 1px solid #9c9c9c;
+	border-radius: 25px;
+	padding: 1.3em;
+	filter: drop-shadow(4px 4px 8px var(--theme-shadow-color));
+	width: min-content;
+}
+
+.titleWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 97%;
+	gap: 1em;
+	margin: 1em auto 0.5em auto;
+}
+
+.titleWrap > h2 {
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.8em;
+}
+
+.titleWrap > p {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.project > p {
+	width: 94%;
+	margin: 0 auto;
+}
+
+.button {
+	display: block;
+	background-color: var(--theme-green-color);
+	color: var(--white-color);
+	width: 100%;
+	cursor: pointer;
+	border: 0;
+	margin: 1em auto 0 auto;
+	outline: 0;
+	font-size: 1em;
+	padding: 8px 0;
+	border-radius: 15px;
+	transition: background-color 0.5s;
+	text-decoration: none;
+	text-align: center;
+}
+
+.button:hover {
+	background-color: var(--theme-light-green-color);
+}

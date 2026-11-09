@@ -55,13 +55,11 @@ const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) 
 		>
 			<div className={listClasses(...cardSideWrapClasses)} onClick={setFlipped}>
 				<div className={listClasses(styles.cardSide, styles.cardSideFront)}>
-					<Link
-						className={listClasses(styles.title, fontComfortaa.className)}
-						href={project.buttons[0]?.route ?? ""}
-						onClick={handleLinkClick}
-					>
-						{project.title}
-					</Link>
+					<h3 className={listClasses(styles.title, fontComfortaa.className)}>
+						<Link href={project.buttons[0]?.route ?? ""} onClick={handleLinkClick}>
+							{project.title}
+						</Link>
+					</h3>
 					<h4 className={styles.date}>{project.date}</h4>
 					<Image
 						className={styles.image}
@@ -73,7 +71,11 @@ const Card: React.FC<CardProps> = ({ project, flipped, setFlipped }: CardProps) 
 					/>
 				</div>
 				<div className={listClasses(styles.cardSide, styles.cardSideBack)}>
-					<h3 className={listClasses(styles.title, fontComfortaa.className)}>{project.title}</h3>
+					<h3 className={listClasses(styles.title, fontComfortaa.className)}>
+						<Link href={project.buttons[0]?.route ?? ""} onClick={handleLinkClick}>
+							{project.title}
+						</Link>
+					</h3>
 					<h4 className={styles.date}>{project.date}</h4>
 					<p className={styles.description}>{project.description}</p>
 					<div className={styles.buttonsWrap}>
