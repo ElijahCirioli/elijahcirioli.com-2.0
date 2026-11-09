@@ -74,7 +74,7 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: nowrap;
-	scrollbar-color: var(--theme-green-color);
+	scrollbar-color: var(--theme-green-color) var(--theme-gray-color);
 	scrollbar-width: thin;
 }
 

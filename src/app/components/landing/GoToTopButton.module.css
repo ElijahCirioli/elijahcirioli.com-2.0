@@ -23,7 +23,7 @@
 
 #button:hover {
 	color: var(--white-color);
-	background-color: var(--light-green-color);
+	background-color: var(--theme-light-green-color);
 }
 
 #marker {

@@ -8,6 +8,8 @@
 	padding: 1.3em;
 	filter: drop-shadow(4px 4px 8px var(--theme-shadow-color));
 	width: min-content;
+	scroll-snap-stop: normal;
+	scroll-snap-align: center;
 }
 
 .titleWrap {

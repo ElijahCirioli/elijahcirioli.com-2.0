@@ -27,7 +27,7 @@ const MicroProject: React.FC<MicroProjectProps> = ({
 	height,
 }: MicroProjectProps) => {
 	return (
-		<div className={styles.project}>
+		<article className={styles.project}>
 			<Frame src={src} title={title} width={width} height={height} hasBorder={true} />
 			<div className={styles.titleWrap}>
 				<h2 className={fontComfortaa.className}>{title}</h2>
@@ -37,7 +37,7 @@ const MicroProject: React.FC<MicroProjectProps> = ({
 			<Link className={styles.button} href={github}>
 				Code
 			</Link>
-		</div>
+		</article>
 	);
 };
 

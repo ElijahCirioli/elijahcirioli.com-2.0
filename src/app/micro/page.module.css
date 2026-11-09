@@ -1,8 +1,15 @@
+#title {
+	font-weight: normal;
+	font-size: 2em;
+	margin: 1.3em auto 0 auto;
+	text-align: center;
+}
+
 #carouselWrap {
 	display: block;
 	position: relative;
-	margin: 0 auto;
-	width: 100%;
+	margin: 0 auto 10px auto;
+	max-width: 90vw;
 }
 
 #carousel {
@@ -11,8 +18,26 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
-	overflow-x: scroll;
+	overflow-x: auto;
 	scroll-snap-type: x mandatory;
-	gap: 4em;
-	padding: 50px 0;
+	gap: 4.5em;
+	padding: 1.7em 45vw;
+}
+
+.fade {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	height: calc(100% - 12px);
+	width: 10%;
+}
+
+#leftFade {
+	background: linear-gradient(to right, var(--theme-light-gray-color), transparent);
+	left: 0;
+}
+
+#rightFade {
+	background: linear-gradient(to left, var(--theme-light-gray-color), transparent);
+	right: 0;
 }
