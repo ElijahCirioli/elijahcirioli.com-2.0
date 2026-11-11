@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ASCII Filter</title>
+		<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+		<div id="holder">
+			<p id="text"></p>
+			<button id="button" onclick="cameraStart();">Launch camera</button>
+			<canvas id="imageCanvas" width="128px" height="128px"></canvas>
+			<video id="camera-view" autoplay playsinline></video>
+			<div id="color-controls">
+				<label class="switch">
+					<input type="checkbox" id="color-check" />
+					<span class="slider round"></span>
+				</label>
+				<p id="color-label">Enable color</p>
+			</div>
+			<script src="index.js"></script>
+		</div>
+	</body>
+</html>

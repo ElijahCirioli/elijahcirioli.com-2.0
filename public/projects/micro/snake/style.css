@@ -1,0 +1,17 @@
+body {
+	margin: 0 0 0 0;
+	background-color: #27703b;
+}
+#score {
+	width: 100px;
+	margin: 3px 0 0 30px;
+	font-size: 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+#myCanvas {
+	margin: 0 0 0 0;
+}
+#score {
+	color: white;
+}

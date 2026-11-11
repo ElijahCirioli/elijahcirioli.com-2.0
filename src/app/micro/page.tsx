@@ -9,12 +9,18 @@ import styles from "./page.module.css";
 export default function Home() {
 	const ref = useRef<HTMLDivElement | null>(null);
 
-	function handleClickLeft(): void {
+	function handleClickLeft() {
 		ref.current?.scrollBy({ top: 0, left: -400, behavior: "smooth" });
 	}
 
-	function handleClickRight(): void {
+	function handleClickRight() {
 		ref.current?.scrollBy({ top: 0, left: 400, behavior: "smooth" });
+	}
+
+	function scrollToStart() {
+		if (ref.current) {
+			ref.current?.scrollTo(0, 0);
+		}
 	}
 
 	return (
@@ -27,7 +33,7 @@ export default function Home() {
 					<div className={styles.fade} id={styles.rightFade}></div>
 					<ScrollButton direction="left" onClick={handleClickLeft} />
 					<ScrollButton direction="right" onClick={handleClickRight} />
-					<div id={styles.carousel} ref={ref}>
+					<div id={styles.carousel} ref={ref} onLoad={scrollToStart}>
 						<MicroProject
 							src="/projects/micro/chaos/index.html"
 							title="Lorenz Attractor"
@@ -64,6 +70,43 @@ export default function Home() {
 							devTime="~1 hour of coding"
 							github="https://github.com/ElijahCirioli/Containment"
 							width={450}
+							height={500}
+						/>
+						<MicroProject
+							src="/projects/micro/minesweeper/index.html"
+							title="Minesweeper"
+							description="I'm gonna pretend I didn't copy the Google version's color scheme. Left click to reveal, right click to place flags."
+							devTime="~1 hour of coding"
+							github="https://github.com/ElijahCirioli/Minesweeper"
+							width={600}
+							height={650}
+						/>
+						<MicroProject
+							src="/projects/micro/snake/index.html"
+							title="Snake"
+							description="A bare-bones implementation of one of the most basic games ever, but a solid
+							time-waster. Move with the arrow keys."
+							devTime="~30 minutes of coding"
+							github="https://github.com/ElijahCirioli/js-snake-demo"
+							width={400}
+							height={438}
+						/>
+						<MicroProject
+							src="/projects/micro/ascii/index.html"
+							title="ASCII Video Filter"
+							description="I wanted to see how easy it would be to play with the pixels of a video in real-time. It turned out to be quite easy."
+							devTime="~45 minutes of coding"
+							github="https://github.com/ElijahCirioli/ASCII-Filter"
+							width={615}
+							height={615}
+						/>
+						<MicroProject
+							src="/projects/micro/mold/index.html"
+							title="Mold Particles"
+							description="An interesting looking particle simulation that vaguely resembles mold. Click to start a new simulation."
+							devTime="~30 minutes of coding"
+							github="https://github.com/ElijahCirioli/mold-visualization"
+							width={500}
 							height={500}
 						/>
 					</div>
